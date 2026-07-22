@@ -1,496 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikhil A S — Data Scientist</title>
-<meta name="description" content="Nikhil A S — Data Scientist working on predictive modeling, NLP, and applied machine learning. Digital University Kerala.">
-
-<!--
-  ============================================================
-  REPLACE-ME CHECKLIST before publishing:
-  1. Affiliation line under the eyebrow — currently "Digital University Kerala"
-  2. Bio paragraph in #about
-  3. Focus-area cards (4) — edit or swap topics
-  4. Featured project + the 3 projects in #projects — text, tags, links
-  5. Skills lists in #skills
-  6. Contact links already filled with your real email / GitHub / LinkedIn
-  ============================================================
--->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-  :root{
-    --bg: #0B0C0D;
-    --bg-alt: #141618;
-    --bg-alt-2: #191C1E;
-    --border: #262A2D;
-    --ink: #F2F1EC;
-    --muted: #9AA0A5;
-    --accent: #C9A24B;
-    --accent-dim: rgba(201,162,75,0.14);
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
-    --max: 1040px;
-  }
-
-  *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior: auto; }
-    *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-  }
-
-  body{
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a{ color: inherit; text-decoration: none; }
-  a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-  }
-
-  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 32px; }
-  .eyebrow{
-    font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); margin: 0 0 14px 0;
-  }
-  .hr{ border: none; border-top: 1px solid var(--border); margin: 0; }
-
-  /* ---------- Header ---------- */
-  header.site{
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(11,12,13,0.86);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav{
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 0;
-  }
-  .nav__name{
-    font-family: var(--serif); font-weight: 600; font-size: 17px; letter-spacing: 0.01em;
-  }
-  .nav__links{
-    display: flex; gap: 30px; list-style: none; margin: 0; padding: 0;
-    font-family: var(--mono); font-size: 12.5px;
-  }
-  .nav__links a{ color: var(--muted); transition: color 0.15s ease; }
-  .nav__links a:hover{ color: var(--ink); }
-
-  /* ---------- Hero ---------- */
-  #hero{ padding: 96px 0 64px 0; text-align: center; position: relative; overflow: hidden; }
-  .hero-bg{
-    position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    opacity: 0.5;
-  }
-  .hero-inner{ position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
-  #hero .eyebrow{ justify-content: center; }
-  #hero h1{
-    font-family: var(--serif); font-weight: 600; font-size: clamp(40px, 6vw, 64px);
-    margin: 0 0 6px 0; letter-spacing: -0.01em;
-  }
-  .hero-role{
-    font-family: var(--serif); font-style: italic; font-weight: 400;
-    color: var(--muted); font-size: clamp(17px, 2vw, 20px); margin: 0 0 28px 0;
-  }
-  .hero-desc{ color: var(--muted); font-size: 15.5px; max-width: 540px; margin: 0 auto 32px auto; }
-  .cta-row{ display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn{
-    font-family: var(--mono); font-size: 13px; padding: 12px 22px; border-radius: 2px;
-    border: 1px solid var(--accent); transition: all 0.15s ease;
-  }
-  .btn--solid{ background: var(--accent); color: #0B0C0D; }
-  .btn--solid:hover{ background: #DDB65E; }
-  .btn--outline{ color: var(--ink); border-color: var(--border); }
-  .btn--outline:hover{ border-color: var(--accent); color: var(--accent); }
-
-  /* ---------- Section scaffolding ---------- */
-  section{ padding: 76px 0; }
-  section.tight{ padding-top: 0; }
-  h2.section-title{
-    font-family: var(--serif); font-weight: 600; font-size: clamp(26px, 3vw, 32px);
-    margin: 0 0 12px 0;
-  }
-  .section-sub{ color: var(--muted); font-size: 15px; max-width: 560px; margin: 0 0 40px 0; }
-
-  /* ---------- About ---------- */
-  #about p{ max-width: 680px; color: var(--muted); font-size: 15.5px; }
-  #about p strong{ color: var(--ink); font-weight: 500; }
-
-  /* ---------- Focus cards ---------- */
-  .focus-grid{
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
-    background: var(--border); border: 1px solid var(--border);
-  }
-  .focus-card{
-    background: var(--bg); padding: 28px 26px;
-  }
-  .focus-card__label{ font-family: var(--mono); font-size: 11.5px; color: var(--accent); margin-bottom: 10px; }
-  .focus-card h3{ font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 0 0 8px 0; }
-  .focus-card p{ color: var(--muted); font-size: 14px; margin: 0; }
-
-  /* ---------- Credential row ---------- */
-  .cred-row{
-    display: flex; gap: 28px; flex-wrap: wrap; padding: 28px 0;
-    font-family: var(--mono); font-size: 13px; color: var(--muted);
-  }
-  .cred-row a{ color: var(--muted); border-bottom: 1px solid transparent; }
-  .cred-row a:hover{ color: var(--accent); border-color: var(--accent); }
-
-  /* ---------- Featured project ---------- */
-  .featured{
-    border: 1px solid var(--border); background: var(--bg-alt);
-    padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end;
-  }
-  .featured__tag{ font-family: var(--mono); font-size: 11.5px; color: var(--accent); margin-bottom: 10px; }
-  .featured h3{ font-family: var(--serif); font-size: 24px; font-weight: 600; margin: 0 0 10px 0; }
-  .featured p{ color: var(--muted); font-size: 15px; max-width: 560px; margin: 0 0 18px 0; }
-  .featured .metrics{ font-family: var(--mono); font-size: 12.5px; color: var(--ink); }
-  .featured .metrics span{ color: var(--muted); }
-  .featured-links{ display: flex; flex-direction: column; gap: 10px; font-family: var(--mono); font-size: 13px; white-space: nowrap; }
-  .featured-links a{ color: var(--ink); border-bottom: 1px solid var(--border); padding-bottom: 2px; }
-  .featured-links a:hover{ color: var(--accent); border-color: var(--accent); }
-
-  /* ---------- Skills ---------- */
-  .skills-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 40px; }
-  .skill-group dt{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-bottom: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
-  .skill-group dd{ margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .skill-chip{
-    font-family: var(--mono); font-size: 12.5px; color: var(--ink);
-    background: var(--bg-alt); border: 1px solid var(--border); padding: 5px 10px; border-radius: 2px;
-  }
-
-  /* ---------- Project list ---------- */
-  .project-row{
-    border-top: 1px solid var(--border);
-    padding: 28px 0; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;
-  }
-  .project-row:last-child{ border-bottom: 1px solid var(--border); }
-  .project-row h3{ font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 0 0 8px 0; }
-  .project-row p{ color: var(--muted); font-size: 14.5px; margin: 0 0 12px 0; max-width: 540px; }
-  .project-tags{ display: flex; flex-wrap: wrap; gap: 6px; }
-  .project-links{ display: flex; flex-direction: column; gap: 8px; font-family: var(--mono); font-size: 12.5px; text-align: right; }
-  .project-links a{ color: var(--muted); }
-  .project-links a:hover{ color: var(--accent); }
-
-  /* ---------- Contact ---------- */
-  #contact{ text-align: center; }
-  #contact .eyebrow{ justify-content: center; }
-  #contact h2{ margin-bottom: 14px; }
-  #contact .section-sub{ margin-left: auto; margin-right: auto; }
-  .contact-email{
-    font-family: var(--serif); font-size: clamp(22px, 3.4vw, 30px); font-weight: 500;
-    color: var(--ink); display: inline-block; margin: 10px 0 28px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .contact-email:hover{ color: var(--accent); border-color: var(--accent); }
-  .social-row{ display: flex; gap: 22px; justify-content: center; font-family: var(--mono); font-size: 13px; }
-  .social-row a{ color: var(--muted); }
-  .social-row a:hover{ color: var(--accent); }
-
-  footer{
-    border-top: 1px solid var(--border);
-    padding: 28px 0; text-align: center;
-    font-family: var(--mono); font-size: 11.5px; color: var(--muted);
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 760px){
-    .focus-grid{ grid-template-columns: 1fr; }
-    .skills-grid{ grid-template-columns: 1fr; }
-    .featured{ grid-template-columns: 1fr; }
-    .featured-links{ flex-direction: row; flex-wrap: wrap; }
-    .project-row{ grid-template-columns: 1fr; }
-    .project-links{ flex-direction: row; text-align: left; }
-    .nav__links{ gap: 16px; font-size: 11.5px; }
-    #hero{ padding: 72px 0 48px 0; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil A S | Data Scientist & ML Engineer</title>
+    <meta name="description" content="Portfolio of Nikhil A S, MSc Data Science student specializing in Python, Machine Learning, and NLP.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="site">
-  <div class="wrap nav">
-    <a href="#hero" class="nav__name">Nikhil A S</a>
-    <ul class="nav__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-<main>
-
-  <!-- ================= HERO ================= -->
-  <section id="hero">
-    <svg class="hero-bg" viewBox="0 0 1040 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g stroke="#C9A24B" stroke-width="1" opacity="0.35">
-        <line x1="120" y1="60" x2="300" y2="140"/>
-        <line x1="300" y1="140" x2="260" y2="280"/>
-        <line x1="300" y1="140" x2="500" y2="100"/>
-        <line x1="500" y1="100" x2="640" y2="200"/>
-        <line x1="640" y1="200" x2="820" y2="120"/>
-        <line x1="640" y1="200" x2="740" y2="320"/>
-        <line x1="820" y1="120" x2="960" y2="80"/>
-        <line x1="260" y1="280" x2="420" y2="340"/>
-      </g>
-      <g fill="#C9A24B">
-        <circle cx="120" cy="60" r="3"/>
-        <circle cx="300" cy="140" r="3.5"/>
-        <circle cx="260" cy="280" r="3"/>
-        <circle cx="500" cy="100" r="3"/>
-        <circle cx="640" cy="200" r="4"/>
-        <circle cx="820" cy="120" r="3"/>
-        <circle cx="960" cy="80" r="3"/>
-        <circle cx="740" cy="320" r="3"/>
-        <circle cx="420" cy="340" r="3"/>
-      </g>
-    </svg>
-    <div class="wrap hero-inner">
-      <p class="eyebrow">Data Science · Digital University Kerala</p>
-      <h1>Nikhil A S</h1>
-      <p class="hero-role">Data Scientist — Predictive Modeling, NLP &amp; Applied ML</p>
-      <p class="hero-desc">
-        I build models that hold up outside the notebook — forecasting, classification, and NLP systems
-        designed to run in production, not just in a demo.
-      </p>
-      <div class="cta-row">
-        <a href="#projects" class="btn btn--solid">View Projects</a>
-        <a href="#contact" class="btn btn--outline">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="hr">
-
-  <!-- ================= ABOUT / FOCUS ================= -->
-  <section id="about">
-    <div class="wrap">
-      <p class="eyebrow">What I work on</p>
-      <h2 class="section-title">Applied machine learning, end to end</h2>
-      <p class="section-sub">
-        From messy raw data to a model that's monitored and versioned in production — I work across
-        the full pipeline, not just the modeling step.
-      </p>
-    </div>
-    <div class="wrap">
-      <div class="focus-grid">
-        <div class="focus-card">
-          <div class="focus-card__label">01 — Forecasting</div>
-          <h3>Predictive Modeling</h3>
-          <p>Time-series and regression models built to hold up outside the notebook, on real, noisy data.</p>
+    <div class="bg-glow"></div>
+    
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">NIKHIL A S</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="focus-card">
-          <div class="focus-card__label">02 — Language</div>
-          <h3>Natural Language Processing</h3>
-          <p>Extracting structure and meaning from unstructured text — classification, extraction, routing.</p>
-        </div>
-        <div class="focus-card">
-          <div class="focus-card__label">03 — Systems</div>
-          <h3>ML Systems &amp; MLOps</h3>
-          <p>Packaging models into services that are tested, monitored, and reproducible, not one-off scripts.</p>
-        </div>
-        <div class="focus-card">
-          <div class="focus-card__label">04 — Practice</div>
-          <h3>Applied Data Science</h3>
-          <p>Turning ambiguous business questions into measurable, testable pipelines with clear outcomes.</p>
-        </div>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="cred-row">
-        <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="mailto:nikhilas7680@gmail.com">Email ↗</a>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <hr class="hr">
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content reveal">
+                <span class="hero-subtitle">MSc Data Science Student</span>
+                <h1>Hi, I'm <span class="text-gradient">Nikhil</span>.<br>I build intelligent data pipelines & models.</h1>
+                <p class="hero-description">
+                    I'm a Data Scientist based in Kerala, India, specializing in Python, Applied Machine Learning, and NLP. I focus on turning complex datasets into robust predictive models and scalable solutions.
+                </p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                    <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- ================= FEATURED PROJECT ================= -->
-  <section class="tight">
-    <div class="wrap" style="padding-top: 76px;">
-      <p class="eyebrow">Featured project</p>
-      <div class="featured">
-        <div>
-          <div class="featured__tag">Forecasting · Production Pipeline</div>
-          <h3>Demand Forecasting Engine</h3>
-          <p>
-            An ensemble forecasting pipeline (LightGBM + Prophet) for retail SKU-level demand, replacing a
-            manual spreadsheet process and reducing inventory overstock.
-          </p>
-          <div class="metrics"><span>mape:</span> 6.2% &nbsp; <span>overstock reduction:</span> 18% &nbsp; <span>cadence:</span> weekly batch</div>
-        </div>
-        <div class="featured-links">
-          <a href="#" target="_blank" rel="noopener">View code ↗</a>
-          <a href="#" target="_blank" rel="noopener">Read writeup ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="reveal">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="glass-card">
+                        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">My Journey</h3>
+                        <p>I am currently pursuing my MSc in Data Science at Digital University Kerala. My passion lies in solving practical problems through data analysis, statistical modeling, and machine learning architectures.</p>
+                        <p>Beyond standard coursework, I dedicate my time to hands-on projects encompassing natural language processing, predictive modeling, and building explainable AI systems.</p>
+                        <p>I am actively seeking entry-level opportunities and internships where I can contribute my skills to impactful data-driven products.</p>
+                    </div>
+                    <div class="about-text">
+                        <h3 style="margin-bottom: 1rem;">What I Focus On</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div>
+                                <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Machine Learning</h4>
+                                <p>Building classification and regression models optimized for real-world metrics, from data ingestion to deployment.</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Natural Language Processing</h4>
+                                <p>Utilizing transformers (like DistilBERT) and TF-IDF to extract meaning, classify text, and build intelligent routing systems.</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Explainable AI</h4>
+                                <p>Ensuring that complex models are transparent and interpretable using tools like SHAP to understand feature impacts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="tight">
-    <div class="wrap">
-      <p class="eyebrow">More work</p>
-      <h2 class="section-title">Projects</h2>
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="reveal">
+                <h2>Technical Toolkit</h2>
+                <div class="skills-grid">
+                    <div class="glass-card skill-category">
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">R</span>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card skill-category">
+                        <h3>Data Science</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                    </div>
 
-      <div class="project-row">
-        <div>
-          <h3>Fraud Job Analyser</h3>
-          <p>A text classification system that flags fraudulent or scam job postings, analyzing listing content to score how likely a posting is fake before a candidate applies.</p>
-          <div class="project-tags">
-            <span class="skill-chip">Python</span>
-            <span class="skill-chip">NLP</span>
-            <span class="skill-chip">scikit-learn</span>
-            <span class="skill-chip">Flask</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">View code ↗</a>
-          <a href="#" target="_blank" rel="noopener">View demo ↗</a>
-        </div>
-      </div>
+                    <div class="glass-card skill-category">
+                        <h3>Machine Learning & NLP</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Logistic Regression</span>
+                            <span class="tag">Random Forest</span>
+                            <span class="tag">SVM</span>
+                            <span class="tag">LightGBM</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Transformers</span>
+                            <span class="tag">DistilBERT</span>
+                            <span class="tag">TF-IDF</span>
+                        </div>
+                    </div>
 
-      <div class="project-row">
-        <div>
-          <h3>Customer Churn Classifier</h3>
-          <p>End-to-end churn prediction service with a SHAP-based explainability dashboard for the support team.</p>
-          <div class="project-tags">
-            <span class="skill-chip">scikit-learn</span>
-            <span class="skill-chip">FastAPI</span>
-            <span class="skill-chip">SHAP</span>
-            <span class="skill-chip">Docker</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">View code ↗</a>
-          <a href="#" target="_blank" rel="noopener">View demo ↗</a>
-        </div>
-      </div>
+                    <div class="glass-card skill-category">
+                        <h3>Tools & Cloud</h3>
+                        <div class="skill-tags">
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Jupyter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="project-row">
-        <div>
-          <h3>Support Ticket Triage (NLP)</h3>
-          <p>Fine-tuned transformer model that routes incoming support tickets to the right team automatically.</p>
-          <div class="project-tags">
-            <span class="skill-chip">PyTorch</span>
-            <span class="skill-chip">HuggingFace</span>
-            <span class="skill-chip">BERT</span>
-            <span class="skill-chip">SageMaker</span>
-          </div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="reveal">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="glass-card project-card reveal">
+                        <div style="margin-bottom: 1rem;">
+                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">NLP & Classification</span>
+                        </div>
+                        <h3>Employment Fraud Detector</h3>
+                        <p class="project-desc">An end-to-end NLP project that analyzes job postings to detect fraudulent listings. Utilizes TF-IDF, traditional ML, and a Transformer-based DistilBERT model to classify postings and generate an explainable trust score.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">DistilBERT</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://github.com/nikhilasds25-bit/employment-fraud-detector" target="_blank" class="project-link">
+                                Source Code
+                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
+                            </a>
+                            <a href="https://employment-fraud-detector-danbudd3v8zz94vx8xkdv9.streamlit.app/" target="_blank" class="project-link">
+                                Live Demo
+                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card project-card reveal">
+                        <div style="margin-bottom: 1rem;">
+                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">Predictive Modeling</span>
+                        </div>
+                        <h3>Loan Default Risk Classification</h3>
+                        <p class="project-desc">A credit risk classification system built for high-cost financial scenarios. Addresses severe class imbalance (11.4:1) using SMOTE and LightGBM, explicitly optimized for recall to predict loan defaults accurately.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">LightGBM</span>
+                            <span class="tag">SMOTE</span>
+                            <span class="tag">SHAP</span>
+                            <span class="tag">EDA</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://github.com/nikhilasds25-bit/Loan-Default-Risk-Classification-ML-Model" target="_blank" class="project-link">
+                                Source Code
+                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card project-card reveal">
+                        <div style="margin-bottom: 1rem;">
+                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">Security & ML</span>
+                        </div>
+                        <h3>Android Malware Detection</h3>
+                        <p class="project-desc">An intelligent malware detection system analyzing Android application system logs and structural features to classify apps as malicious or benign, acting as an alternative to signature-based detection.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Decision Trees</span>
+                            <span class="tag">Feature Engineering</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://github.com/nikhilasds25-bit/Malware-Detection-and-Classification-Using-System-Logs" target="_blank" class="project-link">
+                                Source Code
+                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="glass-card project-card reveal">
+                        <div style="margin-bottom: 1rem;">
+                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">Medical AI</span>
+                        </div>
+                        <h3>Breast Cancer Tumor Classification</h3>
+                        <p class="project-desc">A comparative machine learning pipeline analyzing clinical features from cell nuclei images to classify breast tumors. Compares Logistic Regression, Support Vector Machine, and Random Forest algorithms.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Logistic Regression</span>
+                            <span class="tag">Random Forest</span>
+                            <span class="tag">SVM</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://github.com/nikhilasds25-bit/Breast-Cancer-Tumor-Classification" target="_blank" class="project-link">
+                                Source Code
+                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="reveal">
+                <h2>Let's Work Together</h2>
+                <p>I'm currently seeking entry-level roles and internships in Data Science and Machine Learning. If you have an opportunity or just want to say hi, feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:nikhilas7680@gmail.com" class="social-icon" aria-label="Email" title="Email">
+                        <svg viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg>
+                    </a>
+                    <a href="https://github.com/nikhilasds25-bit" target="_blank" class="social-icon" aria-label="GitHub" title="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Nikhil A S. Built with modern web technologies.</p>
         </div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">View code ↗</a>
-        </div>
-      </div>
+    </footer>
 
-      <div class="project-row">
-        <div>
-          <h3>dataframe-lint <span style="color:var(--muted); font-weight:400; font-size: 14px;">— open source</span></h3>
-          <p>A small Python package that lints pandas pipelines for common data-quality bugs before they reach production.</p>
-          <div class="project-tags">
-            <span class="skill-chip">Python</span>
-            <span class="skill-chip">pytest</span>
-            <span class="skill-chip">CI/CD</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">View repo ↗</a>
-          <a href="#" target="_blank" rel="noopener">View on PyPI ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  <hr class="hr">
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
 
-  <!-- ================= SKILLS ================= -->
-  <section id="skills">
-    <div class="wrap">
-      <p class="eyebrow">Toolbox</p>
-      <h2 class="section-title">Skills</h2>
-      <dl class="skills-grid" style="margin-top: 32px;">
-        <div class="skill-group">
-          <dt>Languages</dt>
-          <dd>
-            <span class="skill-chip">Python</span>
-            <span class="skill-chip">SQL</span>
-            <span class="skill-chip">R</span>
-          </dd>
-        </div>
-        <div class="skill-group">
-          <dt>Modeling</dt>
-          <dd>
-            <span class="skill-chip">PyTorch</span>
-            <span class="skill-chip">TensorFlow</span>
-            <span class="skill-chip">scikit-learn</span>
-            <span class="skill-chip">XGBoost</span>
-          </dd>
-        </div>
-        <div class="skill-group">
-          <dt>Data &amp; Pipelines</dt>
-          <dd>
-            <span class="skill-chip">Pandas</span>
-            <span class="skill-chip">Spark</span>
-            <span class="skill-chip">Airflow</span>
-            <span class="skill-chip">dbt</span>
-          </dd>
-        </div>
-        <div class="skill-group">
-          <dt>Infra</dt>
-          <dd>
-            <span class="skill-chip">AWS</span>
-            <span class="skill-chip">Docker</span>
-            <span class="skill-chip">Kubernetes</span>
-            <span class="skill-chip">MLflow</span>
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </section>
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
 
-  <hr class="hr">
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact">
-    <div class="wrap">
-      <p class="eyebrow">Get in touch</p>
-      <h2 class="section-title">Let's work together</h2>
-      <p class="section-sub">Open to full-time roles, internships, and collaborations in applied ML.</p>
-      <a href="mailto:nikhilas7680@gmail.com" class="contact-email">nikhilas7680@gmail.com</a>
-      <div class="social-row">
-        <a href="tel:+917306084480">+91 73060 84480</a>
-        <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  © <span id="year"></span> Nikhil A S · Digital University Kerala
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+        // Initial check for elements in viewport on load
+        setTimeout(() => {
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight) {
+                    el.classList.add('active');
+                }
+            });
+        }, 100);
+    </script>
 </body>
 </html>
