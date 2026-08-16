@@ -3,283 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhil A S | Data Scientist & ML Engineer</title>
-    <meta name="description" content="Portfolio of Nikhil A S, MSc Data Science student specializing in Python, Machine Learning, and NLP.">
+    <title>Nikhil A S — MSc Data Science Student | Python & Machine Learning</title>
+    <meta name="description" content="Portfolio of Nikhil A S, MSc Data Science student at Digital University Kerala. Projects in Machine Learning, NLP, and Data Analytics.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-glow"></div>
-    
+
+    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">NIKHIL A S</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#" class="brand-name">Nikhil A S</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" id="mobile-toggle">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.pdf" target="_blank" class="btn-resume-nav">Resume</a></li>
             </ul>
         </div>
     </header>
 
     <main class="container">
+        
         <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-content reveal">
-                <span class="hero-subtitle">MSc Data Science Student</span>
-                <h1>Hi, I'm <span class="text-gradient">Nikhil</span>.<br>I build intelligent data pipelines & models.</h1>
-                <p class="hero-description">
-                    I'm a Data Scientist based in Kerala, India, specializing in Python, Applied Machine Learning, and NLP. I focus on turning complex datasets into robust predictive models and scalable solutions.
-                </p>
-                <div class="cta-group">
-                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                    <a href="#contact" class="btn btn-outline">Let's Connect</a>
+        <section class="hero-section" id="hero">
+            <div class="hero-grid">
+                <div class="hero-text-content">
+                    <h1 class="hero-title">Nikhil A S</h1>
+                    <p class="hero-headline">MSc Data Science Student &nbsp;|&nbsp; Python &amp; Machine Learning</p>
+                    <p class="hero-intro">
+                        I enjoy working with data to identify patterns, solve practical problems, and build machine learning solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="resume.pdf" target="_blank" class="btn btn-secondary">Resume</a>
+                    </div>
+                    <div class="hero-links">
+                        <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub</a>
+                        <span>•</span>
+                        <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener">LinkedIn</a>
+                        <span>•</span>
+                        <a href="mailto:nikhilas.ds25@duk.ac.in">Email</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="profile.jpg" alt="Nikhil A S" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="profile-placeholder" style="display: none;">
+                        <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-bottom: 0.5rem; opacity: 0.5;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span>Profile Photo</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about">
-            <div class="reveal">
-                <h2>About Me</h2>
-                <div class="about-grid">
-                    <div class="glass-card">
-                        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">My Journey</h3>
-                        <p>I am currently pursuing my MSc in Data Science at Digital University Kerala. My passion lies in solving practical problems through data analysis, statistical modeling, and machine learning architectures.</p>
-                        <p>Beyond standard coursework, I dedicate my time to hands-on projects encompassing natural language processing, predictive modeling, and building explainable AI systems.</p>
-                        <p>I am actively seeking entry-level opportunities and internships where I can contribute my skills to impactful data-driven products.</p>
-                    </div>
-                    <div class="about-text">
-                        <h3 style="margin-bottom: 1rem;">What I Focus On</h3>
-                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                            <div>
-                                <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Machine Learning</h4>
-                                <p>Building classification and regression models optimized for real-world metrics, from data ingestion to deployment.</p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Natural Language Processing</h4>
-                                <p>Utilizing transformers (like DistilBERT) and TF-IDF to extract meaning, classify text, and build intelligent routing systems.</p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Explainable AI</h4>
-                                <p>Ensuring that complex models are transparent and interpretable using tools like SHAP to understand feature impacts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+                <p>
+                    I'm currently pursuing an MSc in Data Science with a Bio-AI specialization at Digital University Kerala. My interests are mainly in Data Science, Data Analytics, Machine Learning and AI.
+                </p>
+                <p>
+                    I have gained practical experience through academic projects and a three-month Data Science internship at Travan Soft Solutions. I enjoy working with data, experimenting with models and building practical solutions.
+                </p>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <div class="reveal">
-                <h2>Technical Toolkit</h2>
-                <div class="skills-grid">
-                    <div class="glass-card skill-category">
-                        <h3>Programming</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">R</span>
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-company">Travan Soft Solutions</h3>
+                            <div class="exp-role">Data Science Intern</div>
                         </div>
+                        <span class="exp-date">May 2026 – August 2026</span>
                     </div>
-                    
-                    <div class="glass-card skill-category">
-                        <h3>Data Science</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Pandas</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">Matplotlib</span>
-                            <span class="tag">Seaborn</span>
-                            <span class="tag">Scikit-learn</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-card skill-category">
-                        <h3>Machine Learning & NLP</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Logistic Regression</span>
-                            <span class="tag">Random Forest</span>
-                            <span class="tag">SVM</span>
-                            <span class="tag">LightGBM</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Transformers</span>
-                            <span class="tag">DistilBERT</span>
-                            <span class="tag">TF-IDF</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-card skill-category">
-                        <h3>Tools & Cloud</h3>
-                        <div class="skill-tags">
-                            <span class="tag">GitHub</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">VS Code</span>
-                            <span class="tag">Jupyter</span>
-                        </div>
-                    </div>
+                    <ul class="exp-bullets">
+                        <li>Worked on practical data science tasks.</li>
+                        <li>Worked with data preparation and analysis.</li>
+                        <li>Applied machine learning concepts and model evaluation.</li>
+                        <li>Used Python-based tools during project work.</li>
+                        <li>Collaborated on assigned project tasks.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <div class="reveal">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    
-                    <!-- Project 1 -->
-                    <div class="glass-card project-card reveal">
-                        <div style="margin-bottom: 1rem;">
-                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">NLP & Classification</span>
-                        </div>
-                        <h3>Employment Fraud Detector</h3>
-                        <p class="project-desc">An end-to-end NLP project that analyzes job postings to detect fraudulent listings. Utilizes TF-IDF, traditional ML, and a Transformer-based DistilBERT model to classify postings and generate an explainable trust score.</p>
-                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">DistilBERT</span>
-                        </div>
-                        <div class="project-meta">
-                            <a href="https://github.com/nikhilasds25-bit/employment-fraud-detector" target="_blank" class="project-link">
-                                Source Code
-                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
-                            </a>
-                            <a href="https://employment-fraud-detector-danbudd3v8zz94vx8xkdv9.streamlit.app/" target="_blank" class="project-link">
-                                Live Demo
-                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
-                            </a>
-                        </div>
-                    </div>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
 
-                    <!-- Project 2 -->
-                    <div class="glass-card project-card reveal">
-                        <div style="margin-bottom: 1rem;">
-                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">Predictive Modeling</span>
-                        </div>
-                        <h3>Loan Default Risk Classification</h3>
-                        <p class="project-desc">A credit risk classification system built for high-cost financial scenarios. Addresses severe class imbalance (11.4:1) using SMOTE and LightGBM, explicitly optimized for recall to predict loan defaults accurately.</p>
-                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
-                            <span class="tag">LightGBM</span>
-                            <span class="tag">SMOTE</span>
-                            <span class="tag">SHAP</span>
-                            <span class="tag">EDA</span>
-                        </div>
-                        <div class="project-meta">
-                            <a href="https://github.com/nikhilasds25-bit/Loan-Default-Risk-Classification-ML-Model" target="_blank" class="project-link">
-                                Source Code
-                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
-                            </a>
-                        </div>
+                <!-- Project 1: SupplyGraph-RAG -->
+                <div class="project-card">
+                    <span class="project-badge">CURRENT PROJECT — Currently Building</span>
+                    <h3 class="project-title">SupplyGraph-RAG</h3>
+                    <div class="project-subtitle">Supply Chain Risk Prediction and Decision Support using Graph AI and RAG</div>
+                    <p class="project-description">
+                        An ongoing project exploring how supply-chain relationships can be represented as a dynamic graph to analyse risk and support decision-making.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Supply Chain Analytics</span>
+                        <span class="tag">Graph Neural Networks</span>
+                        <span class="tag">Graph Transformer concepts</span>
+                        <span class="tag">Temporal Graph Learning</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">GraphRAG</span>
+                        <span class="tag">LLM-based explanations</span>
                     </div>
-
-                    <!-- Project 3 -->
-                    <div class="glass-card project-card reveal">
-                        <div style="margin-bottom: 1rem;">
-                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">Security & ML</span>
-                        </div>
-                        <h3>Android Malware Detection</h3>
-                        <p class="project-desc">An intelligent malware detection system analyzing Android application system logs and structural features to classify apps as malicious or benign, acting as an alternative to signature-based detection.</p>
-                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Decision Trees</span>
-                            <span class="tag">Feature Engineering</span>
-                        </div>
-                        <div class="project-meta">
-                            <a href="https://github.com/nikhilasds25-bit/Malware-Detection-and-Classification-Using-System-Logs" target="_blank" class="project-link">
-                                Source Code
-                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="glass-card project-card reveal">
-                        <div style="margin-bottom: 1rem;">
-                            <span class="tag" style="font-size: 0.8rem; border-color: var(--primary-color); color: var(--primary-color);">Medical AI</span>
-                        </div>
-                        <h3>Breast Cancer Tumor Classification</h3>
-                        <p class="project-desc">A comparative machine learning pipeline analyzing clinical features from cell nuclei images to classify breast tumors. Compares Logistic Regression, Support Vector Machine, and Random Forest algorithms.</p>
-                        <div class="skill-tags" style="margin-bottom: 1.5rem;">
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Logistic Regression</span>
-                            <span class="tag">Random Forest</span>
-                            <span class="tag">SVM</span>
-                        </div>
-                        <div class="project-meta">
-                            <a href="https://github.com/nikhilasds25-bit/Breast-Cancer-Tumor-Classification" target="_blank" class="project-link">
-                                Source Code
-                                <svg viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></svg>
-                            </a>
-                        </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener" class="btn-github">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
+
+                <!-- Project 2: Employment Fraud Detection -->
+                <div class="project-card">
+                    <h3 class="project-title">Employment Fraud Detection</h3>
+                    <div class="project-subtitle">Machine Learning and NLP for Detecting Fraudulent Job Postings</div>
+                    <p class="project-description">
+                        Machine learning project developed to identify potentially fraudulent job postings from a large dataset of 17,880 job listings using natural language processing and structured feature extraction.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">DistilBERT</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Streamlit</span>
+                    </div>
+                    <div class="project-results">
+                        Key Result: 98% Accuracy with XGBoost
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/nikhilasds25-bit/employment-fraud-detector" target="_blank" rel="noopener" class="btn-github">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Android Malware Detection -->
+                <div class="project-card">
+                    <h3 class="project-title">Android Malware Detection</h3>
+                    <div class="project-subtitle">Permission-Based Machine Learning Classification</div>
+                    <p class="project-description">
+                        Machine learning project for classifying Android applications as malicious or benign using permission-based features across 29,332 application samples.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Random Forest</span>
+                        <span class="tag">SVM</span>
+                        <span class="tag">Model Evaluation</span>
+                    </div>
+                    <div class="project-results">
+                        Results: 97.08% Accuracy (Random Forest) &nbsp;|&nbsp; 98.80% ROC-AUC (SVM)
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/nikhilasds25-bit/Malware-Detection-and-Classification-Using-System-Logs" target="_blank" rel="noopener" class="btn-github">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Programming</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Data Analysis</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Pandas</span>
+                        <span class="skill-item">NumPy</span>
+                        <span class="skill-item">Data Cleaning</span>
+                        <span class="skill-item">EDA</span>
+                        <span class="skill-item">Feature Engineering</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Machine Learning</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Scikit-learn</span>
+                        <span class="skill-item">XGBoost</span>
+                        <span class="skill-item">Random Forest</span>
+                        <span class="skill-item">SVM</span>
+                        <span class="skill-item">Logistic Regression</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">NLP / AI</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">BERT</span>
+                        <span class="skill-item">DistilBERT</span>
+                        <span class="skill-item">Hugging Face</span>
+                        <span class="skill-item">Transformers</span>
+                        <span class="skill-item">RAG</span>
+                        <span class="skill-item">Embeddings</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Deep Learning</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">CNNs</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Graph AI</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Graph Neural Networks</span>
+                        <span class="skill-item">Graph Transformer concepts</span>
+                        <span class="skill-item">GraphRAG</span>
+                        <span class="skill-item">Temporal Graph Learning</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Visualization</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Looker Studio</span>
+                        <span class="skill-item">Matplotlib</span>
+                        <span class="skill-item">Seaborn</span>
+                        <span class="skill-item">Excel</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Cloud / Data</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Google Cloud Platform</span>
+                        <span class="skill-item">BigQuery</span>
+                    </div>
+                </div>
+
+                <div class="skill-group-card">
+                    <h3 class="skill-group-title">Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">Jupyter</span>
+                        <span class="skill-item">Google Colab</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Streamlit</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education-certifications">
+            <div class="duo-grid">
+                
+                <!-- Education -->
+                <div class="edu-card">
+                    <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Education</h2>
+                    <h3 class="edu-degree">MSc Data Science – Bio-AI Specialization</h3>
+                    <div class="edu-institution">Digital University Kerala</div>
+                    <div class="edu-status">Currently pursuing — Semester 3</div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="cert-card">
+                    <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Certifications</h2>
+                    <ul class="cert-list">
+                        <li class="cert-item">Google Cloud Data Analytics Certificate</li>
+                        <li class="cert-item">RAG Pipeline Workshop – Scaler</li>
+                        <li class="cert-item">PMI Kickoff Badge</li>
+                        <li class="cert-item">AI for Product Managers</li>
+                        <li class="cert-item">Advanced Scrum for Project Management</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="reveal">
-                <h2>Let's Work Together</h2>
-                <p>I'm currently seeking entry-level roles and internships in Data Science and Machine Learning. If you have an opportunity or just want to say hi, feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:nikhilas7680@gmail.com" class="social-icon" aria-label="Email" title="Email">
-                        <svg viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+        <section id="contact">
+            <div class="contact-box">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Let's Connect</h2>
+                <p class="contact-text">
+                    I'm currently looking for internship and entry-level opportunities in Data Science, Data Analytics, Machine Learning and AI.
+                </p>
+                <div class="contact-links-grid">
+                    <a href="mailto:nikhilas.ds25@duk.ac.in" class="contact-button">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        nikhilas.ds25@duk.ac.in
                     </a>
-                    <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
-                        <svg viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg>
+                    <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener" class="contact-button">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        LinkedIn
                     </a>
-                    <a href="https://github.com/nikhilasds25-bit" target="_blank" class="social-icon" aria-label="GitHub" title="GitHub">
-                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
+                    <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener" class="contact-button">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub
                     </a>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Nikhil A S. Built with modern web technologies.</p>
+        <div class="container footer-content">
+            <div>
+                <span class="footer-brand">Nikhil A S</span> &nbsp;—&nbsp; MSc Data Science Student | Python &amp; Machine Learning
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:nikhilas.ds25@duk.ac.in">Email</a>
+            </div>
+            <div>
+                &copy; <span id="year">2026</span> Nikhil A S
+            </div>
         </div>
     </footer>
 
     <script>
-        // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Reveal animations on scroll
-        const revealElements = document.querySelectorAll('.reveal');
-        
-        const revealCallback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        };
-
-        const revealOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
-        
-        revealElements.forEach(el => {
-            revealObserver.observe(el);
+        const toggle = document.getElementById('mobile-toggle');
+        const menu = document.getElementById('nav-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
         });
-
-        // Initial check for elements in viewport on load
-        setTimeout(() => {
-            revealElements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top <= window.innerHeight) {
-                    el.classList.add('active');
-                }
-            });
-        }, 100);
     </script>
 </body>
 </html>
