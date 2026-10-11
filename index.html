@@ -337,22 +337,25 @@ img{max-width:100%;display:block}
 </article>
 <article class="project-card reveal">
 <div class="project-top">
-<span class="status research">Research</span>
+<span class="status research">Research · Reproducible</span>
 <span class="project-num">05</span>
 </div>
-<h3>Semantic Network &amp; Competitive Graph Diffusion</h3>
-<p class="project-subtitle">Graph-based analysis of political discourse and sentiment spread</p>
+<h3>Graph Propagation &amp; Temporal Learning</h3>
+<p class="project-subtitle">Directed network science, competitive diffusion, temporal simulation and graph-model forecasting</p>
 <p>
-              This work explores how information and sentiment spread through a directed political Twitter network using <strong>semantic and network analysis</strong>.
-              It combines structural graph measures, sentiment-aware competitive diffusion logic and temporal analysis.
-            </p>
+Investigated information propagation in an Indian political Twitter network using <strong>85,495 tweets</strong>, <strong>109,443 supplied directed edge rows</strong> and <strong>129,604 reconstructed timestamped interactions</strong>. Built directed connectivity and time-respecting reachability analyses, competitive two-class diffusion, randomized null models and leakage-controlled weekly forecasting.
+</p>
 <p>
-              The project helped me strengthen my understanding of <strong>network science, PageRank-based influence, diffusion modelling and research-oriented data analysis</strong>.
-              It is one of the clearest examples of my ability to work beyond standard ML tasks and into <strong>graph-driven research</strong>.
-            </p>
-<div class="project-metrics"><span>85,495 tweets</span><span>109,443 edges</span><span>Graph diffusion modelling</span></div>
+A key result: the original transmission regime had an empirical <strong>R<sub>eff</sub> of 0.00250</strong>. Calibrated experiments found <strong>no detected material difference</strong> between observed and degree-preserving rewired directed networks, but a substantial difference versus symmetrized graphs. Compared GCN, GraphSAGE, GAT and temporal models against history-aware baselines; recent user history provided the stronger modest forecasting signal.
+</p>
+<p>
+Extended the study with <strong>Shapley-style transmission-kernel attribution</strong>, event-driven temporal propagation, statistical controls and reproducibility audits. Dataset class labels were treated as <strong>operational labels</strong>, not verified political positions; no real-world causal information-flow claims are made.
+</p>
+<div class="project-metrics"><span>17,598 users in main WCC</span><span>25 weekly snapshots</span><span>100 rewired graph controls</span><span>R<sub>eff</sub> = 0.00250 (historical)</span></div>
+<div class="project-tags"><span>NetworkX</span><span>PyTorch</span><span>GCN / GraphSAGE / GAT</span><span>Monte Carlo</span><span>Temporal graphs</span><span>Statistical testing</span></div>
 <div class="project-links">
-<a href="https://github.com/nikhilasds25-bit/graph-propagation-temporal-learning" rel="noopener" target="_blank">Repository</a>
+<a href="semantic-network.html">Explore research case study</a>
+<a href="https://github.com/nikhilasds25-bit/graph-propagation-temporal-learning" rel="noopener" target="_blank">Code &amp; manuscript</a>
 </div>
 </article>
 </div>
