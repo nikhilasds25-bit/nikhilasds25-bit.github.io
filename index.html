@@ -1,120 +1,489 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b12">
-  <meta name="description" content="Nikhil A S — Data Science, AI/ML and Agentic AI portfolio. Explore deployed applications, applied ML projects, graph intelligence research and work in progress.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nikhil A S — AI Engineer & Data Scientist">
-  <meta property="og:description" content="From models to meaningful systems. Deployed ML apps, graph AI research and software built with purpose.">
-  <meta property="og:url" content="https://nikhilasds25-bit.github.io/">
-  <meta property="og:image" content="https://nikhilasds25-bit.github.io/assets/nikhil-portrait.jpg">
-  <title>Nikhil A S — Building Intelligent Systems</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio.css">
-  <script src="portfolio.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f6f8fc" name="theme-color"/>
+<meta content="Nikhil A S — MSc Data Science (Bio-AI specialization) portfolio featuring applied AI, machine learning, graph intelligence and deployed projects." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Nikhil A S — AI / ML &amp; Data Science Portfolio" property="og:title"/>
+<meta content="Portfolio of Nikhil A S with selected projects, certifications and AI/data science work." property="og:description"/>
+<title>Nikhil A S | Data Science &amp; Bio-AI Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20rx%3D%2220%22%20fill%3D%22%2317315d%22%2F%3E%3Crect%20x%3D%2221%22%20y%3D%2221%22%20width%3D%2254%22%20height%3D%2254%22%20rx%3D%2213%22%20fill%3D%22none%22%20stroke%3D%22%23cbe3ff%22%20stroke-width%3D%224%22%2F%3E%3Ccircle%20cx%3D%2234%22%20cy%3D%2249%22%20r%3D%227%22%20fill%3D%22%2381d6d2%22%2F%3E%3Ccircle%20cx%3D%2262%22%20cy%3D%2235%22%20r%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Ccircle%20cx%3D%2262%22%20cy%3D%2263%22%20r%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M40%2046%2055%2037M40%2052%2055%2061%22%20stroke%3D%22%23bdd4f7%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f6f8fc;
+  --bg-soft:#eef3fa;
+  --panel:#ffffff;
+  --panel-soft:#f8fbff;
+  --text:#0f1d37;
+  --muted:#5e6d85;
+  --line:#d9e1ee;
+  --primary:#1f4fd1;
+  --primary-dark:#173da5;
+  --accent:#0e8a8a;
+  --accent-soft:#dff6f4;
+  --gold:#b68435;
+  --shadow:0 16px 45px rgba(24,52,103,.08);
+  --radius:24px;
+  --container:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,#f8fbff 0%,#f6f8fc 100%);color:var(--text)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(var(--container),calc(100% - 48px));margin:0 auto}
+.progress{position:fixed;left:0;top:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent));width:0;z-index:1000}
+.site-header{position:sticky;top:0;z-index:999;background:rgba(246,248,252,.82);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s ease}
+.site-header.scrolled{border-color:rgba(15,29,55,.08);box-shadow:0 10px 30px rgba(30,45,84,.05)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{font-size:1.2rem;font-weight:800;letter-spacing:-.03em;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:.95rem;color:var(--muted);font-weight:500;transition:.2s ease}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:11px 16px;border-radius:999px;background:var(--text);color:#fff !important}
+.menu-toggle{display:none;border:0;background:none;padding:0;width:42px;height:42px;cursor:pointer}
+.menu-toggle span{display:block;height:2px;background:var(--text);margin:7px 0;border-radius:999px;transition:.22s ease}
+.hero{position:relative;overflow:hidden;padding:72px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:52px;min-height:calc(100vh - 110px)}
+.hero-bg-shape{position:absolute;border-radius:50%;filter:blur(12px);opacity:.55;animation:float 8s ease-in-out infinite}
+.hero-bg-one{width:320px;height:320px;background:rgba(31,79,209,.08);top:120px;left:-70px}
+.hero-bg-two{width:300px;height:300px;background:rgba(14,138,138,.09);right:-60px;bottom:50px;animation-delay:-4s}
+.eyebrow,.section-kicker,.strip-label{font:600 .78rem 'JetBrains Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:16px 0 18px;font-size:clamp(2.8rem,6vw,5.2rem);line-height:.98;letter-spacing:-.055em;max-width:10ch}
+.hero h1 span{color:var(--primary)}
+.hero-text{font-size:1.08rem;line-height:1.9;color:var(--muted);max-width:670px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+.hero-tags span,.project-tags span,.project-metrics span{display:inline-flex;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#31415c;font-size:.9rem}
+.hero-actions,.hero-links,.project-links,.contact-links{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:14px;font-weight:700;transition:.22s ease}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 12px 30px rgba(31,79,209,.23)}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.btn-secondary{background:#fff;color:var(--text);border:1px solid var(--line)}
+.btn-secondary:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.hero-links{margin-top:22px}
+.hero-links a{font-size:.96rem;color:var(--muted)}
+.hero-links a:hover{color:var(--primary)}
+.portrait-card{background:linear-gradient(180deg,#ffffff 0%,#f2f6fc 100%);border:1px solid rgba(17,41,80,.08);border-radius:32px;padding:18px;box-shadow:var(--shadow);transform:rotate(1.2deg);transition:transform .25s ease, box-shadow .25s ease}
+.portrait-card:hover{transform:rotate(0deg) translateY(-4px);box-shadow:0 24px 60px rgba(20,50,101,.12)}
+.portrait-card img{border-radius:22px;aspect-ratio:4/5;object-fit:cover}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.mini-stats div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 16px;box-shadow:var(--shadow)}
+.mini-stats strong{display:block;font-size:1.5rem;color:var(--primary);margin-bottom:4px}
+.mini-stats span{color:var(--muted);font-size:.9rem;line-height:1.5}
+.section{padding:96px 0}
+.intro-strip{padding-top:32px}
+.strip-grid,.section-head,.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.strip-grid h2,.section-head h2,.about-copy h2,.contact-box h2{margin:10px 0 0;font-size:clamp(2rem,4vw,3.4rem);line-height:1.06;letter-spacing:-.045em}
+.strip-grid p:last-child,.section-copy,.about-copy p,.contact-box p,.project-card p,.cert-card p,.cert-note p{color:var(--muted);line-height:1.9}
+.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:34px}
+.project-card{background:var(--panel);border:1px solid rgba(15,29,55,.08);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.project-feature{grid-column:1/-1;background:linear-gradient(135deg,#ffffff 0%,#f4f8ff 55%,#f7fbff 100%)}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.project-num{font:600 .85rem 'JetBrains Mono',monospace;color:#7d89a0}
+.status{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;font-size:.85rem;font-weight:700}
+.status.ongoing{background:#e7f3ff;color:#1f4fd1}
+.status.shipped{background:#e8fbf4;color:#0c8365}
+.status.research{background:#f9f3df;color:#8a6827}
+.project-card h3{margin:0;font-size:1.9rem;letter-spacing:-.04em}
+.project-subtitle{margin:8px 0 18px !important;color:var(--primary) !important;font-weight:600}
+.project-links{margin-top:22px}
+.project-links a,.contact-links a{padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:600;color:var(--text);transition:.2s ease}
+.project-links a:hover,.contact-links a:hover{transform:translateY(-2px);box-shadow:var(--shadow);color:var(--primary)}
+.section-muted{background:linear-gradient(180deg,#edf4fa 0%,#f4f8fd 100%)}
+.cert-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:34px}
+.cert-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.cert-card h3{margin:0 0 8px;font-size:1.08rem}
+.cert-note{margin-top:22px;padding:24px;border:1px dashed rgba(15,29,55,.16);background:#fff;border-radius:22px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.about-panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px 26px;box-shadow:var(--shadow)}
+.about-panel h3{margin:0 0 14px;font-size:1.2rem}
+.about-panel ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.about-panel li{display:flex;justify-content:space-between;gap:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.about-panel li:last-child{border-bottom:0;padding-bottom:0}
+.about-panel span{color:var(--muted);font-size:.95rem}
+.about-panel strong{text-align:right;font-size:.96rem}
+.contact-section{padding-top:40px}
+.contact-box{background:linear-gradient(135deg,#0f1d37 0%,#17315d 100%);padding:42px;border-radius:28px;box-shadow:0 24px 70px rgba(12,30,63,.18)}
+.contact-box h2,.contact-box p,.contact-box .section-kicker{color:#fff}
+.contact-box p{max-width:760px;color:rgba(255,255,255,.78)}
+.contact-links{margin-top:22px}
+.contact-links a{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);color:#fff}
+.contact-links a:hover{color:#fff;background:rgba(255,255,255,.16)}
+.site-footer{padding:26px 0 34px}
+.footer-wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;color:#6b7890;font-size:.92rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes float{50%{transform:translateY(-18px)}}
+@media (max-width:1080px){
+  .hero-grid,.strip-grid,.section-head,.about-grid{grid-template-columns:1fr}
+  .hero-grid{min-height:auto;padding-top:40px}
+  .projects-grid{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .container{width:calc(100% - 36px)}
+  .nav-wrap{height:72px}
+  .menu-toggle{display:block}
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;padding:14px 18px 22px;background:rgba(246,248,252,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:10px}
+  .nav-links.active{display:flex}
+  .hero{padding-top:40px}
+  .hero h1{font-size:clamp(2.5rem,12vw,4rem)}
+  .mini-stats{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+  .cert-note,.footer-wrap{flex-direction:column;align-items:flex-start}
+  .about-panel li{flex-direction:column}
+}
+
+/* Final visual polish: verified link cards, soft motion and experience */
+.portrait-caption{font:600 .72rem 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--muted);text-align:center;margin-top:20px}
+.project-card{position:relative;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 22px 54px rgba(24,52,103,.13);border-color:#b8cbee}
+.cert-card{transition:transform .25s ease,box-shadow .25s ease}
+.cert-card:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(24,52,103,.11)}
+.cert-issuer{font:700 .68rem 'JetBrains Mono',monospace;letter-spacing:.075em;color:var(--primary);margin-bottom:18px}
+.cert-card h3{font-size:1.08rem;line-height:1.35;letter-spacing:-.025em}
+.cert-card p{font-size:.88rem;line-height:1.65}
+.credential-links{margin-top:48px;padding:30px;border:1px solid var(--line);background:#fff;border-radius:26px;box-shadow:var(--shadow)}
+.credential-header h3{font-size:1.6rem;letter-spacing:-.04em;margin:10px 0}
+.credential-header p:last-child{color:var(--muted);line-height:1.7;max-width:760px}
+.credential-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.credential-link-grid a{display:flex;min-height:140px;flex-direction:column;align-items:flex-start;padding:20px;border-radius:16px;border:1px solid var(--line);background:var(--panel-soft);transition:transform .25s,border-color .25s}
+.credential-link-grid a:hover{transform:translateY(-4px);border-color:#9db6e3}
+.credential-link-grid span{font:600 .7rem 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--primary)}
+.credential-link-grid strong{font-size:1.04rem;letter-spacing:-.02em;margin:10px 0 18px}
+.credential-link-grid em{font-style:normal;font-size:.86rem;color:var(--accent);margin-top:auto;font-weight:700}
+.experience-proof{padding-top:22px;margin-top:22px;border-top:1px solid var(--line)}
+.experience-proof h4{font-size:1.15rem;margin:10px 0}
+.experience-proof p{line-height:1.65;color:var(--muted)}
+.experience-proof a{display:inline-block;color:var(--primary);font-weight:700;font-size:.9rem;margin-top:3px}
+.experience-proof a:hover{text-decoration:underline}
+@media(max-width:1000px){.credential-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.credential-link-grid{grid-template-columns:1fr}.credential-links{padding:20px}.credential-link-grid a{min-height:112px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}.reveal{opacity:1;transform:none}}
+
+</style>
+
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="page-noise" aria-hidden="true"></div>
-  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-  <header class="site-header" id="site-header">
-    <nav class="nav shell" aria-label="Main navigation">
-      <a class="wordmark" href="#home" aria-label="Nikhil A S, home"><span class="wordmark-icon">N<span>.</span></span><span class="wordmark-text">NIKHIL <em>AS</em></span></a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
-      <div class="nav-links" id="nav-links">
-        <a href="#work">Work <span class="nav-small">01</span></a>
-        <a href="#building">In progress <span class="nav-small">02</span></a>
-        <a href="#about">About <span class="nav-small">03</span></a>
-        <a href="#contact">Contact <span class="nav-small">04</span></a>
-        <a class="nav-resume" href="resume.html" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
-      </div>
-    </nav>
-  </header>
-  <main id="main">
-    <section class="hero shell" id="home" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <div class="eyebrow hero-eyebrow"><span class="pulse-dot"></span> OPEN TO AI / ML & DATA SCIENCE OPPORTUNITIES</div>
-        <p class="hero-overline">Hello, I'm Nikhil A S <span class="wave">✳</span></p>
-        <h1 id="hero-title">I turn <span class="headline-outline">complex data</span> into <span class="headline-accent">intelligent systems<span class="headline-period">.</span></span></h1>
-        <p class="hero-description">Data science postgraduate & AI builder. I work at the intersection of <strong>machine learning, agentic AI, graph intelligence</strong> and useful digital products — from research notebooks to deployed applications.</p>
-        <div class="hero-cta-row">
-          <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
-          <a class="button button-ghost" href="resume.html" target="_blank" rel="noopener">View résumé <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="hero-socials" aria-label="Profile links">
-          <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><span class="social-rule"></span>
-          <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><span class="social-rule"></span>
-          <a href="mailto:nikhilas.ds25@duk.ac.in">Email <span>↗</span></a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
-        <div class="portrait-frame tilt-card" id="portrait-card">
-          <div class="portrait-inner"><img src="assets/nikhil-portrait.jpg" alt="Portrait of Nikhil A S wearing a white shirt and black tie" width="480" height="600" fetchpriority="high"></div>
-          <div class="portrait-label"><span class="portrait-label-square"></span><span>NIKHIL A S<br><small>DATA SCIENCE × AI ENGINEERING</small></span><span class="portrait-number">01 / 01</span></div>
-        </div>
-        <div class="floating-chip chip-top" aria-hidden="true"><span class="chip-symbol">✳</span> BUILD / LEARN / SHIP</div>
-        <div class="floating-chip chip-bottom" aria-hidden="true"><span class="chip-signal"></span> SYSTEMS THINKER</div>
-      </div>
-      <div class="hero-footnote"><span>BASED IN KERALA, INDIA <span class="footnote-divider">/</span> OPEN TO RELOCATION</span><a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
-    </section>
+<div class="progress" id="progress"></div>
+<header class="site-header" id="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="#home">Nikhil A S</a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menu-toggle">
+<span></span><span></span><span></span>
+</button>
+<nav class="nav-links" id="nav-links">
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a class="nav-cta" href="resume.html" rel="noopener" target="_blank">Résumé</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="home">
+<div aria-hidden="true" class="hero-bg-shape hero-bg-one"></div>
+<div aria-hidden="true" class="hero-bg-shape hero-bg-two"></div>
+<div class="container hero-grid">
+<div class="hero-copy reveal">
+<p class="eyebrow">AI / ML · DATA SCIENCE · GRAPH INTELLIGENCE</p>
+<h1>Building practical <span>AI systems</span> with strong data foundations.</h1>
+<p class="hero-text">
+            I’m <strong>Nikhil A S</strong>, an MSc Data Science student with a <strong>Bio-AI specialization</strong> at Digital University Kerala.
+            I build machine learning projects, graph-based intelligence systems, RAG workflows and data products that solve real problems.
+          </p>
+<div class="hero-tags">
+<span>Python</span>
+<span>Machine Learning</span>
+<span>Graph AI</span>
+<span>FastAPI</span>
+<span>PySpark</span>
+<span>NLP</span>
+</div>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">View Projects</a>
+<a class="btn btn-secondary" href="https://github.com/nikhilasds25-bit" rel="noopener" target="_blank">GitHub</a>
+</div>
+<div class="hero-links">
+<a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" rel="noopener" target="_blank">LinkedIn</a>
+<a href="mailto:nikhilas.ds25@duk.ac.in">nikhilas.ds25@duk.ac.in</a>
+<a href="resume.html" rel="noopener" target="_blank">View Résumé</a>
+</div>
+</div>
+<div class="hero-side reveal">
+<div class="portrait-card">
+<img alt="Portrait of Nikhil A S" fetchpriority="high" height="600" src="assets/nikhil-portrait.jpg" width="480"/>
+</div>
 
-    <div class="marquee" aria-label="Focus areas"><div class="marquee-track" aria-hidden="true"><span>APPLIED MACHINE LEARNING</span><b>✳</b><span>AGENTIC AI</span><b>✳</b><span>GRAPH INTELLIGENCE</span><b>✳</b><span>NLP & TRANSFORMERS</span><b>✳</b><span>DATA ENGINEERING</span><b>✳</b><span>APPLIED MACHINE LEARNING</span><b>✳</b><span>AGENTIC AI</span><b>✳</b><span>GRAPH INTELLIGENCE</span><b>✳</b><span>NLP & TRANSFORMERS</span><b>✳</b><span>DATA ENGINEERING</span><b>✳</b></div></div>
+<p class="portrait-caption">NIKHIL A S  /  DATA SCIENCE • BIO-AI • APPLIED AI</p></div>
+</div>
+</section>
+<section class="section intro-strip reveal">
+<div class="container strip-grid">
+<div>
+<p class="strip-label">Current Focus</p>
+<h2>From deployed ML apps to graph-driven decision intelligence.</h2>
+</div>
+<p>
+          My work spans <strong>fraud detection, financial risk modelling, memory-assistive AI, semantic network analysis</strong> and
+          <strong>supply-chain intelligence</strong>. I enjoy taking projects from raw data and modelling through evaluation, explainability, APIs and working interfaces.
+        </p>
+</div>
+</section>
+<section class="section" id="projects">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<p class="section-kicker">SELECTED PROJECTS</p>
+<h2>Projects that best represent my work.</h2>
+</div>
+<p class="section-copy">
+            A curated selection of the projects I want recruiters and collaborators to see first — combining applied machine learning,
+            graph intelligence, product thinking and research-oriented work.
+          </p>
+</div>
+<div class="projects-grid">
+<article class="project-card project-feature reveal">
+<div class="project-top">
+<span class="status ongoing">Flagship · Ongoing</span>
+<span class="project-num">01</span>
+</div>
+<h3>SupplyBeacon</h3>
+<p class="project-subtitle">Explainable supply-chain risk intelligence platform</p>
+<p>
+              SupplyBeacon is my flagship project focused on <strong>electronics supply-chain risk prediction and decision intelligence</strong>.
+              It combines real product data, external disruption signals such as news and weather, graph construction, GraphRAG-style reasoning,
+              and explainable outputs for operational decision-making.
+            </p>
+<p>
+              The system models relationships between <strong>products, suppliers, warehouses and locations</strong>, then uses graph-based analysis
+              and AI workflows to help identify disruptions, risk factors and demand-sensitive decisions. This project reflects my strongest interests
+              in <strong>graph AI, agentic workflows and real-world business intelligence</strong>.
+            </p>
+<div class="project-tags"><span>Graph AI</span><span>GraphRAG</span><span>FastAPI</span><span>Agentic AI</span><span>Supply Chain</span></div>
+<div class="project-links">
+<a href="https://github.com/nikhilasds25-bit/SupplyBeacon" rel="noopener" target="_blank">Repository</a>
+<a href="https://github.com/nikhilasds25-bit/ElectroGraph-AI" rel="noopener" target="_blank">Research base</a>
+</div>
+</article>
+<article class="project-card reveal">
+<div class="project-top">
+<span class="status shipped">Completed</span>
+<span class="project-num">02</span>
+</div>
+<h3>Loan Default Risk Classification</h3>
+<p class="project-subtitle">Banking risk prediction using machine learning</p>
+<p>
+              This project predicts whether a loan applicant is likely to default, helping financial institutions take better credit decisions.
+              I worked on the <strong>data understanding, preprocessing and exploratory analysis</strong> stages, and the full project compared models such as
+              <strong>Logistic Regression, Random Forest and LightGBM</strong>.
+            </p>
+<p>
+              The solution included <strong>feature engineering, threshold optimisation and SHAP-based explainability</strong>, making it useful not only for prediction
+              but also for understanding why a customer may be risky. It demonstrates my ability to work on <strong>applied financial analytics at scale</strong>.
+            </p>
+<div class="project-metrics"><span>307,511 applications</span><span>LightGBM best model</span><span>Recall-focused risk tuning</span></div>
+<div class="project-links">
+<a href="https://loan-default-risk-classification-ml-model-mivjfwjinyvkabgkncyw.streamlit.app" rel="noopener" target="_blank">Live App</a>
+<a href="https://github.com/nikhilasds25-bit/Loan-Default-Risk-Classification-ML-Model" rel="noopener" target="_blank">Repository</a>
+</div>
+</article>
+<article class="project-card reveal">
+<div class="project-top">
+<span class="status shipped">Deployed</span>
+<span class="project-num">03</span>
+</div>
+<h3>Employment Fraud Detector</h3>
+<p class="project-subtitle">Fake job posting detection with NLP and transformers</p>
+<p>
+              The Employment Fraud Detector identifies whether an online job post is genuine or fraudulent. I built an end-to-end pipeline using
+              <strong>NLP preprocessing, classical machine learning baselines and a DistilBERT-based transformer model</strong>.
+            </p>
+<p>
+              Beyond prediction, the project also focuses on <strong>trust explanation</strong> so that users can understand which elements of a job post appear risky.
+              This project highlights my strength in <strong>text analytics, model comparison and turning ML into a usable web application</strong>.
+            </p>
+<div class="project-metrics"><span>17,880 job posts</span><span>DistilBERT-based pipeline</span><span>Streamlit deployment</span></div>
+<div class="project-links">
+<a href="https://employment-fraud-detector-danbudd3v8zz94vx8xkdv9.streamlit.app/" rel="noopener" target="_blank">Live App</a>
+<a href="https://github.com/nikhilasds25-bit/employment-fraud-detector" rel="noopener" target="_blank">Repository</a>
+</div>
+</article>
+<article class="project-card reveal">
+<div class="project-top">
+<span class="status ongoing">Prototype</span>
+<span class="project-num">04</span>
+</div>
+<h3>MemoryLoop AI</h3>
+<p class="project-subtitle">Assistive memory-support system for dementia care</p>
+<p>
+              MemoryLoop AI was designed during a hackathon as a <strong>memory assistance system for dementia care</strong>. I contributed to the system architecture,
+              backend logic and intelligent workflow design for caregiver and patient interactions.
+            </p>
+<p>
+              The idea combines <strong>voice-based input, recall assessment, task reminders and adaptive questioning</strong> to support patients and caregivers in a more
+              human-centered way. This project shows my interest in <strong>impactful AI that solves real healthcare and quality-of-life problems</strong>.
+            </p>
+<div class="project-tags"><span>Hackathon</span><span>FastAPI</span><span>Voice AI</span><span>SQLite</span><span>Assistive AI</span></div>
+</article>
+<article class="project-card reveal">
+<div class="project-top">
+<span class="status research">Research</span>
+<span class="project-num">05</span>
+</div>
+<h3>Semantic Network &amp; Competitive Graph Diffusion</h3>
+<p class="project-subtitle">Graph-based analysis of political discourse and sentiment spread</p>
+<p>
+              This work explores how information and sentiment spread through a directed political Twitter network using <strong>semantic and network analysis</strong>.
+              It combines structural graph measures, sentiment-aware competitive diffusion logic and temporal analysis.
+            </p>
+<p>
+              The project helped me strengthen my understanding of <strong>network science, PageRank-based influence, diffusion modelling and research-oriented data analysis</strong>.
+              It is one of the clearest examples of my ability to work beyond standard ML tasks and into <strong>graph-driven research</strong>.
+            </p>
+<div class="project-metrics"><span>85,495 tweets</span><span>109,443 edges</span><span>Graph diffusion modelling</span></div>
+<div class="project-links">
+<a href="https://github.com/nikhilasds25-bit/graph-propagation-temporal-learning" rel="noopener" target="_blank">Repository</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-muted" id="certificates">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<p class="section-kicker">CERTIFICATES &amp; LEARNING</p>
+<h2>Courses, badges and workshops that support my work.</h2>
+</div>
+<p class="section-copy">Training, badges and learning milestones that complement my hands-on AI and data science projects. Original credential links are included below.</p>
+</div>
 
-    <section class="section shell work-section" id="work" aria-labelledby="work-title">
-      <div class="section-top reveal"><div><p class="kicker"><span>01 / SELECTED WORK</span> <span class="kicker-line"></span> FINISHED & DOCUMENTED</p><h2 id="work-title">Built, tested<span class="dot">.</span><br><span class="serif-italic">Then shared.</span></h2></div><p class="section-intro">Real projects first. Every featured card links to a published repository, and deployed applications have a live demo where available.</p></div>
-      <div class="featured-grid">
-        <article class="project-card project-hero-card reveal" data-category="NLP · FULL-STACK ML">
-          <div class="project-visual visual-fraud" aria-hidden="true"><div class="visual-grid"></div><div class="fraud-ui"><div class="fake-header"><span class="fake-logo">◆</span> JOB POSTING ANALYSIS <span class="fake-dot"></span></div><div class="fake-body"><span class="fake-line long"></span><span class="fake-line medium"></span><span class="fake-line short"></span><div class="risk-pill">◆ &nbsp; FRAUD RISK DETECTED</div><div class="fake-meter"><span></span></div></div></div><span class="visual-index">PROJECT / 001</span></div>
-          <div class="project-body"><div class="project-meta"><span class="status status-shipped"><i></i> DEPLOYED</span><span class="project-type">NLP · CLASSIFICATION</span></div><h3>Employment Fraud<br>Detector</h3><p>End-to-end fake job posting detection, combining traditional NLP/ML with a fine-tuned DistilBERT model. Includes an explainable trust score and interactive Streamlit app.</p><div class="metric-row"><div><strong>17,880</strong><span>job postings</span></div><div><strong>0.88</strong><span>fraud F1 (DistilBERT)</span></div><div><strong>99%</strong><span>reported accuracy</span></div></div><div class="tag-list"><span>DistilBERT</span><span>scikit-learn</span><span>Streamlit</span><span>PyTorch</span></div><div class="card-links"><a class="project-link" href="https://employment-fraud-detector-danbudd3v8zz94vx8xkdv9.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a><a class="project-link secondary" href="https://github.com/nikhilasds25-bit/employment-fraud-detector" target="_blank" rel="noopener noreferrer">Source code <span>↗</span></a></div></div>
-        </article>
-        <article class="project-card reveal" data-category="CYBERSECURITY · MACHINE LEARNING">
-          <div class="project-visual visual-malware" aria-hidden="true"><div class="malware-circles"><span></span><span></span><span></span></div><div class="malware-lock">◇<span>ML</span></div><div class="visual-stat">AUC <strong>0.9934</strong></div><span class="visual-index">PROJECT / 002</span></div>
-          <div class="project-body"><div class="project-meta"><span class="status status-shipped"><i></i> COMPLETED</span><span class="project-type">SECURITY · ML</span></div><h3>Android Malware<br>Detection</h3><p>Classified benign versus malicious Android apps using structured features. Implemented Random Forest evaluation and feature-importance analysis in a collaborative model comparison.</p><div class="compact-metric">29,332 samples <span>·</span> Tuned RF ROC-AUC <b>0.9934</b></div><div class="tag-list"><span>Random Forest</span><span>SVM</span><span>scikit-learn</span></div><div class="card-links"><a class="project-link" href="https://github.com/nikhilasds25-bit/Malware-Detection-and-Classification-Using-System-Logs" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a></div></div>
-        </article>
-        <article class="project-card reveal" data-category="FINTECH · APPLIED ANALYTICS">
-          <div class="project-visual visual-credit" aria-hidden="true"><div class="credit-title">RISK ASSESSMENT <span>ANALYTICS</span></div><div class="credit-bars"><span style="--bar:40%"></span><span style="--bar:70%"></span><span style="--bar:52%"></span><span style="--bar:85%"></span><span style="--bar:61%"></span><span style="--bar:94%"></span><span style="--bar:72%"></span><span style="--bar:80%"></span></div><div class="credit-foot"><b>307,511</b> RECORDS ANALYSED</div><span class="visual-index">PROJECT / 003</span></div>
-          <div class="project-body"><div class="project-meta"><span class="status status-shipped"><i></i> DEPLOYED · TEAM</span><span class="project-type">FINANCIAL ML</span></div><h3>Loan Default Risk<br>Classification</h3><p>Credit-risk analytics on the Home Credit dataset. My contribution focused on data preparation and exploratory analysis; the team developed LightGBM models, threshold tuning, SHAP explanations and an app.</p><div class="compact-metric">307K applications <span>·</span> LightGBM ROC-AUC <b>0.768</b></div><div class="tag-list"><span>EDA</span><span>LightGBM</span><span>SHAP</span><span>Streamlit</span></div><div class="card-links"><a class="project-link" href="https://loan-default-risk-classification-ml-model-mivjfwjinyvkabgkncyw.streamlit.app" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a><a class="project-link secondary" href="https://github.com/nikhilasds25-bit/Loan-Default-Risk-Classification-ML-Model" target="_blank" rel="noopener noreferrer">Source code <span>↗</span></a></div></div>
-        </article>
-        <article class="project-card reveal" data-category="HEALTHCARE · APPLIED MACHINE LEARNING">
-          <div class="project-visual visual-health" aria-hidden="true"><svg class="ecg" viewBox="0 0 540 130" role="presentation"><path d="M0 73H95L120 73L141 35L165 105L187 12L210 73H289L311 73L334 49L355 91L379 73H540"/></svg><div class="health-cross">＋</div><span class="visual-index">PROJECT / 004</span></div>
-          <div class="project-body"><div class="project-meta"><span class="status status-shipped"><i></i> DEPLOYED · TEAM</span><span class="project-type">HEALTHCARE ML</span></div><h3>Breast Cancer<br>Tumor Classification</h3><p>Built and evaluated a clinical-feature classification pipeline with Logistic Regression, SVM and Random Forest, model comparison and explainability in a three-person academic team.</p><div class="compact-metric">Wisconsin diagnostic dataset <span>·</span> <b>3</b> models compared</div><div class="tag-list"><span>scikit-learn</span><span>Streamlit</span><span>Model evaluation</span></div><div class="card-links"><a class="project-link" href="https://breast-cancer-tumor-classification-5psqkbblq5szdblfeuw4uu.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a><a class="project-link secondary" href="https://github.com/nikhilasds25-bit/Breast-Cancer-Tumor-Classification" target="_blank" rel="noopener noreferrer">Source code <span>↗</span></a></div></div>
-        </article>
-      </div>
-      <div class="more-work reveal"><div class="more-work-heading"><h3>More completed work<span class="dot">.</span></h3><p>Selected academic projects and hands-on builds</p></div><div class="mini-project-list">
-        <div class="mini-project"><span class="mini-num">05</span><div><h4>6th Sense · MemoryLoop AI</h4><p>Led a six-member team in a 36-hour hackathon to prototype a voice-enabled, adaptive memory-assistance platform.</p><span>FastAPI · NLP · SQLite · STT/TTS</span></div><span class="mini-mark">HACKATHON</span></div>
-        <div class="mini-project"><span class="mini-num">06</span><div><h4>NYC Taxi Analytics at Scale</h4><p>Processed 3,066,766 taxi rows with PySpark, measured caching performance and explored scalable data pipelines.</p><span>PySpark · Spark SQL · Data engineering</span></div><span class="mini-mark">BIG DATA</span></div>
-        <div class="mini-project"><span class="mini-num">07</span><div><h4>Hospital Discharge Optimization</h4><p>Led a five-member team using PM4Py and event-log analysis to investigate healthcare workflow bottlenecks.</p><span>Process mining · PM4Py · Healthcare analytics</span></div><span class="mini-mark">TEAM LEAD</span></div>
-        <div class="mini-project"><span class="mini-num">08</span><div><h4>Movie Recommendation System</h4><p>Built a MovieLens recommendation workflow combining TF-IDF/cosine similarity with collaborative-filtering concepts.</p><span>Recommender systems · Python · NLP</span></div><span class="mini-mark">ML</span></div>
-        <div class="mini-project"><span class="mini-num">09</span><div><h4>College Knowledge Chatbot</h4><p>Created a retrieval-augmented chatbot workflow for answering questions grounded in institution documents.</p><span>RAG · Retrieval · LLMs</span></div><span class="mini-mark">GEN AI</span></div>
-      </div></div>
-    </section>
 
-    <section class="section building-section" id="building" aria-labelledby="building-title"><div class="shell"><div class="section-top reveal"><div><p class="kicker"><span>02 / RESEARCH & DEVELOPMENT</span> <span class="kicker-line"></span> ACTIVE BUILDS</p><h2 id="building-title">Currently <span class="serif-italic">in motion.</span></h2></div><p class="section-intro">The next set of challenges I'm actively solving. These are works in progress — with implemented milestones and planned features clearly distinguished.</p></div>
-      <div class="research-grid">
-        <article class="research-card research-feature reveal"><div class="research-card-top"><span class="status status-building"><i></i> IN DEVELOPMENT</span><span class="research-number">R&D / 01</span></div><div class="graph-art" aria-hidden="true"><svg viewBox="0 0 600 210" preserveAspectRatio="xMidYMid meet"><path d="M75 105L180 45L260 135L383 52L490 135L540 60M180 45L383 52M260 135L490 135M75 105L260 135M383 52L540 60"/><g><circle cx="75" cy="105" r="11"/><circle cx="180" cy="45" r="12"/><circle cx="260" cy="135" r="17"/><circle cx="383" cy="52" r="12"/><circle cx="490" cy="135" r="14"/><circle cx="540" cy="60" r="9"/></g></svg><span class="graph-caption">EVENT → GRAPH → EXPLANATION</span></div><div class="research-body"><p class="research-overline">FLAGSHIP / SUPPLY CHAIN INTELLIGENCE</p><h3>SupplyBeacon <span>/</span> ElectroGraph-AI</h3><p>A graph-driven supply-chain intelligence system connecting electronics, supplier, warehouse, news and weather data. The existing pipeline includes graph construction, deterministic risk scoring and a GraphSAGE representation-learning baseline; broader predictive and agentic capabilities are being developed.</p><div class="milestones"><span><b>✓</b> 2,525 graph nodes</span><span><b>✓</b> 7,438 edges</span><span><b>↗</b> Expanding intelligent workflows</span></div><div class="research-links"><a href="https://github.com/nikhilasds25-bit/ElectroGraph-AI" target="_blank" rel="noopener noreferrer">Graph research ↗</a><a href="https://github.com/nikhilasds25-bit/SupplyBeacon" target="_blank" rel="noopener noreferrer">Application repo ↗</a></div></div></article>
-        <article class="research-card reveal"><div class="research-card-top"><span class="status status-building"><i></i> RESEARCH IN PROGRESS</span><span class="research-number">R&D / 02</span></div><div class="research-icon">⤳</div><p class="research-overline">NETWORK SCIENCE · INFORMATION DIFFUSION</p><h3>Graph Propagation & Temporal Learning</h3><p>Investigating time-respecting information spread, competing diffusion processes and leakage-controlled forecasting in a directed social network. Manuscript and reproducibility package under development.</p><div class="research-progress"><span>Directed graphs</span><span>Temporal analysis</span><span>Reproducible research</span></div><a class="research-cta" href="https://github.com/nikhilasds25-bit/graph-propagation-temporal-learning" target="_blank" rel="noopener noreferrer">Explore research ↗</a></article>
-        <article class="research-card reveal"><div class="research-card-top"><span class="status status-building"><i></i> PROTOTYPE IN PROGRESS</span><span class="research-number">R&D / 03</span></div><div class="research-icon">⌗</div><p class="research-overline">COMPUTER VISION · MANUFACTURING</p><h3>WATCHER-X</h3><p>A PCB defect-inspection project using the DeepPCB dataset. YOLO-format data preparation and a YOLO11n detection baseline are implemented; vision-language reasoning and RAG integration are exploration goals.</p><div class="research-progress"><span>YOLO11n baseline</span><span>DeepPCB</span><span>Vision AI</span></div><span class="research-cta research-cta-muted">Source not publicly listed yet</span></article>
-        <article class="research-card reveal"><div class="research-card-top"><span class="status status-building"><i></i> DATA PREPARATION</span><span class="research-number">R&D / 04</span></div><div class="research-icon">അ</div><p class="research-overline">MULTILINGUAL AI · OCR</p><h3>Malayalam Handwriting OCR</h3><p>Preparing and validating handwritten Malayalam transcription data for a resource-conscious vision-language/OCR fine-tuning experiment, with a focus on reproducibility and annotation quality.</p><div class="research-progress"><span>Dataset curation</span><span>OCR</span><span>Model evaluation planned</span></div><span class="research-cta research-cta-muted">Training and validation in progress</span></article>
-      </div>
-    </div></section>
+<div class="cert-grid">
+<article class="cert-card reveal"><div class="cert-issuer">01 / GOOGLE DEEPMIND</div><h3>Train a Small Language Model</h3><p>Hands-on language model training badge.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">02 / GOOGLE CLOUD</div><h3>Google Cloud Data Analytics &amp; Data Engineering Learning</h3><p>BigQuery, Dataform, Dataplex, Cloud Composer, Dataflow, Dataproc and Looker learning pathway.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">03 / SCALER</div><h3>Retrieval-Augmented Generation Workshop</h3><p>RAG systems, retrieval workflows and large-language-model application concepts.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">04 / INFOSYS SPRINGBOARD</div><h3>Advanced Scrum</h3><p>Agile delivery, project coordination and iterative development.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">05 / PMI</div><h3>Kickoff Badge</h3><p>Foundational project management methods.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">06 / UDEMY</div><h3>AI for Product Managers</h3><p>Applying AI within product decisions and feature development.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">07 / COURSERA</div><h3>Databases and SQL for Data Science with Python</h3><p>SQL, relational data and data analysis concepts.</p></article>
+<article class="cert-card reveal"><div class="cert-issuer">08 / WORKSHOPS</div><h3>Additional Technical &amp; Research Learning</h3><p>AI, machine learning, data analytics and applied research workshops, including AMS participation.</p></article>
+</div><div class="credential-links reveal">
+<div class="credential-header">
+<div><p class="section-kicker">DIRECT CREDENTIAL LINKS</p><h3>Credential verification &amp; course records</h3><p>Each link opens the original credential page. Titles below identify the hosting platform; the individual certificate titles were not independently available.</p></div>
+</div>
+<div class="credential-link-grid">
+<a href="https://moonshot.scaler.com/s/sl/wWr5W0WWUF" rel="noopener noreferrer" target="_blank"><span>SCALER MOONSHOT</span><strong>Certificate link 01</strong><em>View credential ↗</em></a>
+<a href="https://moonshot.scaler.com/s/sl/QIh65U1Lqh" rel="noopener noreferrer" target="_blank"><span>SCALER MOONSHOT</span><strong>Certificate link 02</strong><em>View credential ↗</em></a>
+<a href="https://www.coursera.org/account/accomplishments/verify/BVG370EHPXR5" rel="noopener noreferrer" target="_blank"><span>COURSERA</span><strong>Certificate record</strong><em>View credential ↗</em></a>
+<a href="https://www.credly.com/badges/d0601522-0bb1-4d5e-9ca1-b3496a9c98e/linked_in_profile" rel="noopener noreferrer" target="_blank"><span>CREDLY</span><strong>Digital badge 01</strong><em>View badge ↗</em></a>
+<a href="https://www.credly.com/badges/23d4813b-8673-4527-aaa2-b40fff2cbe7f/linked_in_profile" rel="noopener noreferrer" target="_blank"><span>CREDLY</span><strong>Digital badge 02</strong><em>View badge ↗</em></a>
+</div>
+</div></div>
+</section>
+<section class="section" id="about">
+<div class="container about-grid">
+<div class="about-copy reveal">
+<p class="section-kicker">ABOUT ME</p>
+<h2>Data science student, project builder and AI enthusiast.</h2>
+<p>
+            I am currently pursuing <strong>MSc Data Science (Bio-AI specialization)</strong> at Digital University Kerala.
+            My interests include <strong>machine learning, graph intelligence, generative AI, agentic systems, NLP and analytics-driven product building</strong>.
+          </p>
+<p>
+            I also completed a <strong>Data Science Internship at Travansoft Solutions</strong>, where I worked on data cleaning, EDA, ML modelling, SQL analysis,
+            Power BI dashboards and documentation. I enjoy building projects that are both technically solid and useful in real-world settings.
+          </p>
+</div>
+<div class="about-panel reveal">
+<h3>Quick profile</h3>
+<ul>
+<li><span>Location</span><strong>Thiruvananthapuram, Kerala</strong></li>
+<li><span>Education</span><strong>MSc Data Science (Bio-AI)</strong></li>
+<li><span>Interests</span><strong>AI/ML, Data Science, Analytics, Graph AI</strong></li>
+<li><span>Tools</span><strong>Python, SQL, scikit-learn, PyTorch, FastAPI, LangGraph</strong></li>
+<li><span>Open to</span><strong>Internships &amp; entry-level roles</strong></li>
+</ul>
+<div class="experience-proof"><p class="section-kicker">INTERNSHIP · MAY–JULY 2026</p><h4>Data Science Intern — Travansoft Solutions</h4><p>Worked with Python data pipelines, exploratory analysis, scikit-learn, SQL, reporting and Power BI during a three-month internship.</p><a href="https://lnkd.in/p/d_TBT3SB" rel="noopener noreferrer" target="_blank">Internship certificate &amp; LinkedIn post ↗</a></div></div>
+</div>
+</section>
+<section class="section contact-section" id="contact">
+<div class="container contact-box reveal">
+<p class="section-kicker">CONTACT</p>
+<h2>Let’s build something meaningful.</h2>
+<p>
+          I’m open to opportunities in AI/ML, data science, analytics and related roles. If you’d like to discuss projects, internships or collaborations, feel free to reach out.
+        </p>
+<div class="contact-links">
+<a href="mailto:nikhilas.ds25@duk.ac.in">nikhilas.ds25@duk.ac.in</a>
+<a href="https://github.com/nikhilasds25-bit" rel="noopener" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" rel="noopener" target="_blank">LinkedIn</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-wrap">
+<p>© <span id="year"></span> Nikhil A S · Built for a professional AI / Data Science portfolio.</p>
+<a href="#home">Back to top ↑</a>
+</div>
+</footer>
+<script>
+(() => {
+  const progress = document.getElementById('progress');
+  const header = document.getElementById('site-header');
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-links');
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
-    <section class="section about-section shell" id="about" aria-labelledby="about-title"><div class="section-top reveal"><div><p class="kicker"><span>03 / THE PERSON & THE PROCESS</span><span class="kicker-line"></span> BEYOND THE CODE</p><h2 id="about-title">Curiosity, with<br><span class="serif-italic">execution.</span></h2></div><p class="section-intro">I enjoy connecting research, engineering and real-world outcomes — and taking ownership of the steps between an idea and a working result.</p></div>
-      <div class="about-layout"><div class="about-main reveal"><p class="about-lead">I’m an MSc Data Science student at <span>Digital University Kerala</span> with a background in applied ML, NLP, graph analytics and building data-backed tools.</p><p>During my Data Science internship at Travansoft Solutions, I worked on data cleaning, exploratory analysis, model development, SQL and Power BI reporting. Beyond models, I enjoy building interfaces and connecting workflows with APIs, agent frameworks and practical validation.</p><p>My strongest interests are <strong>AI systems that reason over data</strong>, interpretable machine learning and products where technical work genuinely helps someone make a better decision.</p><div class="experience-block"><div class="experience-marker">↗</div><div><p class="experience-label">EXPERIENCE</p><h3>Data Science Intern <span>· Travansoft Solutions</span></h3><p>May – July 2026</p></div><span class="experience-period">03 MONTHS</span></div><div class="experience-block education-block"><div class="experience-marker">✳</div><div><p class="experience-label">EDUCATION</p><h3>MSc Data Science <span>· Digital University Kerala</span></h3><p>2025 – 2027 (in progress)</p></div></div></div>
-      <aside class="about-sidebar reveal"><div class="sidebar-header"><span class="side-ping"></span> TECHNICAL TOOLKIT</div><div class="skill-cluster"><h3>AI & MACHINE LEARNING</h3><p>Python <span>·</span> scikit-learn <span>·</span> PyTorch <span>·</span> Transformers <span>·</span> YOLO <span>·</span> SHAP</p></div><div class="skill-cluster"><h3>LLM & AGENTIC SYSTEMS</h3><p>RAG <span>·</span> GraphRAG <span>·</span> LangChain <span>·</span> LangGraph <span>·</span> MCP <span>·</span> FastAPI</p></div><div class="skill-cluster"><h3>GRAPHS & DATA ENGINEERING</h3><p>NetworkX <span>·</span> GraphSAGE <span>·</span> PySpark <span>·</span> SQL <span>·</span> Pandas <span>·</span> BigQuery</p></div><div class="skill-cluster"><h3>APPS & ANALYTICS</h3><p>Streamlit <span>·</span> Power BI <span>·</span> Git/GitHub <span>·</span> REST APIs <span>·</span> Docker foundations</p></div><div class="sidebar-footer">RESEARCH → BUILD → EVALUATE → ITERATE</div></aside></div>
-      <div class="credential-strip reveal"><div><span class="credential-icon">✳</span><span>Google DeepMind<br><strong>Train a Small Language Model</strong></span></div><div><span class="credential-icon">⌁</span><span>Google Cloud<br><strong>Data & Cloud Learning</strong></span></div><div><span class="credential-icon">✧</span><span>PMI & Agile<br><strong>Project Delivery Foundations</strong></span></div></div>
-    </section>
+  const onScroll = () => {
+    const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    progress.style.width = `${(scrollY / max) * 100}%`;
+    header.classList.toggle('scrolled', scrollY > 16);
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll, { passive: true });
+  onScroll();
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-inner reveal"><div class="contact-topline"><span>04 / LET'S CONNECT</span><span>HAVE A ROLE OR AN IDEA IN MIND?</span></div><h2 id="contact-title">Let's build something<br><span>worth using.</span></h2><p>Exploring internships, early-career AI/ML and data science roles, research collaborations and meaningful product challenges.</p><a class="contact-email" href="mailto:nikhilas.ds25@duk.ac.in">nikhilas.ds25@duk.ac.in <span>↗</span></a><div class="contact-bottom"><span>TRIVANDRUM, KERALA · OPEN TO RELOCATION / REMOTE</span><div><a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="resume.html" target="_blank" rel="noopener noreferrer">RÉSUMÉ ↗</a></div></div></div></section>
-  </main>
-  <footer class="site-footer shell"><div class="footer-mark">N<span>.</span></div><p>Designed & built with purpose.<br>© <span id="year">2026</span> Nikhil A S</p><a href="#home">BACK TO TOP ↑</a></footer>
+  const closeNav = () => {
+    nav.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('active', !open);
+  });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+  addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealItems.forEach(el => io.observe(el));
+  } else {
+    revealItems.forEach(el => el.classList.add('visible'));
+  }
+})();
+
+</script>
 </body>
 </html>
