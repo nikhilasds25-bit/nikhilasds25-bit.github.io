@@ -254,25 +254,27 @@ img{max-width:100%;display:block}
 <div class="projects-grid">
 <article class="project-card project-feature reveal">
 <div class="project-top">
-<span class="status ongoing">Flagship · Ongoing</span>
+<span class="status shipped">Flagship · Deployed</span>
 <span class="project-num">01</span>
 </div>
 <h3>SupplyBeacon</h3>
-<p class="project-subtitle">Explainable supply-chain risk intelligence platform</p>
+<p class="project-subtitle">Explainable graph-based supply-chain risk intelligence &amp; decision-support platform</p>
 <p>
-              SupplyBeacon is my flagship project focused on <strong>electronics supply-chain risk prediction and decision intelligence</strong>.
-              It combines real product data, external disruption signals such as news and weather, graph construction, GraphRAG-style reasoning,
-              and explainable outputs for operational decision-making.
+              SupplyBeacon is a publicly deployed research prototype for <strong>electronics supply-chain risk intelligence</strong>.
+              It connects product and supply-network data with weather/news disruption evidence, a directed NetworkX graph,
+              deterministic operational risk scoring, and traceable evidence-to-impact analysis.
             </p>
 <p>
-              The system models relationships between <strong>products, suppliers, warehouses and locations</strong>, then uses graph-based analysis
-              and AI workflows to help identify disruptions, risk factors and demand-sensitive decisions. This project reflects my strongest interests
-              in <strong>graph AI, agentic workflows and real-world business intelligence</strong>.
+              The platform combines <strong>GraphRAG</strong> for evidence retrieval, <strong>LangGraph</strong> for agentic query orchestration,
+              historical shipping ML, a warehouse-disruption Scenario Lab, and network management. The application uses a
+              <strong>React + TypeScript</strong> frontend on Vercel and a <strong>FastAPI + Docker</strong> backend on Render.
             </p>
-<div class="project-tags"><span>Graph AI</span><span>GraphRAG</span><span>FastAPI</span><span>Agentic AI</span><span>Supply Chain</span></div>
+<div class="project-metrics"><span>3,144 graph nodes</span><span>9,346 deployed graph edges</span><span>320 backend tests passed</span></div>
+<div class="project-tags"><span>Python</span><span>NetworkX</span><span>GraphRAG</span><span>LangGraph</span><span>FastAPI</span><span>React</span><span>Docker</span></div>
 <div class="project-links">
+<a href="https://supply-beacon.vercel.app/login" rel="noopener" target="_blank">Live App</a>
 <a href="https://github.com/nikhilasds25-bit/SupplyBeacon" rel="noopener" target="_blank">Repository</a>
-<a href="https://github.com/nikhilasds25-bit/ElectroGraph-AI" rel="noopener" target="_blank">Research base</a>
+<a href="https://supplybeacon-api.onrender.com" rel="noopener" target="_blank">Backend API</a>
 </div>
 </article>
 <article class="project-card reveal">
