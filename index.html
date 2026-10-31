@@ -96,6 +96,13 @@
     .resume-btn{padding:11px 16px;border-radius:14px;background:var(--text);color:var(--bg);font-weight:750;font-size:.91rem;border:1px solid var(--text);transition:.2s ease}
     .resume-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
     .menu-btn{display:none}
+    .cv-download-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+    .cv-download-card{padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--panel);box-shadow:0 12px 35px rgba(25,49,92,.055);display:flex;flex-direction:column;gap:12px}
+    .cv-download-card h3{margin:0;font-size:1.35rem;letter-spacing:-.03em}
+    .cv-download-card p{margin:0;color:var(--muted);line-height:1.7;font-size:.92rem}
+    .cv-download-meta{font-size:.76rem;color:var(--teal);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .cv-download-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:7px}
+    .cv-download-actions .btn{font-size:.86rem}
     .hero{position:relative;padding:76px 0 58px;min-height:calc(100vh - 78px);display:grid;align-items:center}
     .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:66px;align-items:center}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font:600 .77rem "JetBrains Mono";letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
@@ -255,7 +262,7 @@
     @media(max-width:760px){
       .container{width:min(100% - 28px,var(--container))}
       .nav{height:68px}.nav-links{position:absolute;left:14px;right:14px;top:76px;padding:14px;background:var(--panel-solid);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:none;flex-direction:column;align-items:stretch;gap:0}
-      .nav-links.active{display:flex}.nav-links a{padding:11px 8px}.menu-btn{display:grid}.resume-btn{display:none}
+      .nav-links.active{display:flex}.nav-links a{padding:11px 8px}.menu-btn{display:grid}.resume-btn{display:none}.cv-download-grid{grid-template-columns:1fr}
       .hero{min-height:auto;padding:48px 0 34px}.hero h1{font-size:clamp(3rem,15vw,5rem)}
       .hero-grid{gap:36px}.hero-visual{min-height:470px}.profile-card{width:min(370px,88%)}.floating-chip{font-size:.66rem}.chip-one{left:-2%}.chip-two{right:-2%}
       .proof-grid,.project-grid,.cap-grid,.credential-grid{grid-template-columns:1fr}
@@ -285,12 +292,13 @@
       <a href="#experience">Experience</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#credentials">Credentials</a>
+      <a href="#cv">CV</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
-      <a class="resume-btn" href="resume.html" target="_blank" rel="noopener">Résumé </a>
+      <a class="resume-btn" href="#cv">Download CV</a>
       <button class="menu-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -303,19 +311,20 @@
       <div class="eyebrow"><span class="pulse"></span> Open to AI / ML & data opportunities</div>
       <h1>I build AI systems that <span class="accent">show their work.</span></h1>
       <p class="hero-lede">
-        I’m Nikhil, an MSc Data Science student who enjoys turning messy data and ambitious ideas into useful products.
+        I’m Nikhil, an MSc Data Science and Bio-AI student who enjoys turning messy data and ambitious ideas into useful products.
         My work spans machine learning, graph intelligence, GenAI agents, APIs and analytics — with a strong focus on
         explainability, testing and real-world decision support.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#work">Explore my work </a>
         <a class="btn btn-secondary" href="case-studies.html">Case study deck </a>
+        <a class="btn btn-secondary" href="#cv">Download CV</a>
         <a class="btn btn-secondary" href="https://supply-beacon.vercel.app/login" target="_blank" rel="noopener">Open SupplyBeacon </a>
         <a class="btn btn-secondary" href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub </a>
       </div>
       <div class="hero-meta">
         <span>Thiruvananthapuram, Kerala</span>
-        <span>MSc Data Science</span>
+        <span>MSc Data Science &amp; Bio-AI</span>
         <span>Python · FastAPI · LangGraph · PyTorch</span>
       </div>
     </div>
@@ -544,7 +553,7 @@
         <p class="section-copy">I keep credentials secondary to projects, but these are useful signals of structured learning in language models, cloud data, RAG, distributed systems and SQL.</p>
       </div>
       <div class="credential-grid">
-        <div class="credential"><small>Google DeepMind</small><strong>Train a Small Language Model</strong><span>Language-model training badge</span></div>
+        <div class="credential"><small>Google DeepMind</small><strong>AI Research Foundations Capstone</strong><span>Completed - Gemma 3, LoRA and responsible evaluation</span></div>
         <a class="credential" href="https://www.credly.com/badges/23d4813b-8673-4527-aaa2-b40fff2cbe7f/linked_in_profile" target="_blank" rel="noopener"><small>Google Cloud / Credly</small><strong>Google Cloud Data Analytics Certificate</strong><span>View credential </span></a>
         <a class="credential" href="https://moonshot.scaler.com/s/sl/wWr5W0WWUF" target="_blank" rel="noopener"><small>Scaler</small><strong>Designing Scalable RAG Pipelines Masterclass</strong><span>View credential </span></a>
         <a class="credential" href="https://moonshot.scaler.com/s/sl/QIh65U1Lqh" target="_blank" rel="noopener"><small>Scaler</small><strong>Kafka &amp; ZooKeeper Masterclass</strong><span>View credential </span></a>
@@ -555,13 +564,42 @@
   </div>
 </section>
 
+<section class="section section-soft" id="cv">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><p class="kicker">Download CV</p><h2>A complete view of my work.</h2></div>
+      <p class="section-copy">Choose the detailed master CV for my full project portfolio, technical skills and research, or the one-page version for quick applications.</p>
+    </div>
+    <div class="cv-download-grid">
+      <article class="cv-download-card reveal">
+        <span class="cv-download-meta">Full profile · 2 pages</span>
+        <h3>Master CV</h3>
+        <p>My complete background across applied data science, advanced Python, AI/ML, GenAI and LLM applications, voice/chatbot systems, computer vision, data engineering, graph AI and Bio-AI. Includes selected projects, additional applied work, experience and professional development.</p>
+        <div class="cv-download-actions">
+          <a class="btn btn-primary" href="downloads/Nikhil_AS_Master_CV_2026.pdf" download>Download Full CV (PDF)</a>
+          <a class="btn btn-secondary" href="resume.html">View online CV</a>
+        </div>
+      </article>
+      <article class="cv-download-card reveal">
+        <span class="cv-download-meta">Quick application · 1 page</span>
+        <h3>Quick-Apply CV</h3>
+        <p>A concise version for internship and entry-level applications, with the strongest AI/ML, LLM, chatbot, voice AI, Python and data-science evidence up front.</p>
+        <div class="cv-download-actions">
+          <a class="btn btn-primary" href="downloads/Nikhil_AS_Quick_Apply_CV_2026.pdf" download>Download One-Page CV</a>
+          <a class="btn btn-secondary" href="resume.html">View profile</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="about">
   <div class="container about-grid">
     <div class="about-copy reveal">
       <p class="kicker">About me</p>
       <h2>I like projects that force me to understand the whole system.</h2>
       <p>
-        I’m currently pursuing an MSc in Data Science at Digital University Kerala. I started with conventional machine-learning projects,
+        I’m currently pursuing an MSc in Data Science and Bio-AI at Digital University Kerala (formerly IIITM-K). I started with conventional machine-learning projects,
         but the work I enjoy most now sits where data, software and AI meet: graph systems, agentic workflows, backend APIs and explainable decision tools.
       </p>
       <p>
@@ -572,10 +610,10 @@
     <div class="about-panel reveal">
       <h3>Quick profile</h3>
       <div class="about-list">
-        <div class="about-row"><span>Education</span><strong>MSc Data Science</strong></div>
-        <div class="about-row"><span>University</span><strong>Digital University Kerala</strong></div>
+        <div class="about-row"><span>Education</span><strong>MSc Data Science and Bio-AI</strong></div>
+        <div class="about-row"><span>University</span><strong>Digital University Kerala (formerly IIITM-K)</strong></div>
         <div class="about-row"><span>Location</span><strong>Thiruvananthapuram, Kerala</strong></div>
-        <div class="about-row"><span>Interested in</span><strong>AI/ML · Data Science · GenAI · Graph AI</strong></div>
+        <div class="about-row"><span>Interested in</span><strong>AI/ML · Data Science · GenAI · Graph AI · Bio-AI</strong></div>
         <div class="about-row"><span>Open to</span><strong>Internships & entry-level roles</strong></div>
         <div class="about-row"><span>Links</span><strong><a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener">LinkedIn</a></strong></div>
       </div>
@@ -589,10 +627,10 @@
     <h2>If you’re hiring someone who likes understanding the “why” behind the model, I’d love to talk.</h2>
     <p>I’m currently looking for internships and entry-level opportunities where I can contribute to AI/ML, data science, analytics or applied GenAI work while continuing to grow as an engineer.</p>
     <div class="contact-actions">
-      <a href="mailto:nikhilas.ds25@duk.ac.in">Email me </a>
+      <a href="mailto:nikhilas7680@gmail.com">Email me</a>
       <a href="https://www.linkedin.com/in/nikhil-a-s-a11679263" target="_blank" rel="noopener">LinkedIn </a>
       <a href="https://github.com/nikhilasds25-bit" target="_blank" rel="noopener">GitHub </a>
-      <a href="resume.html" target="_blank" rel="noopener">Résumé </a>
+      <a href="#cv">Download CV</a>
     </div>
   </div>
 </section>
@@ -601,7 +639,7 @@
 <footer class="footer">
   <div class="container footer-wrap">
     <span>© <span id="year"></span> Nikhil A S · Built as a living record of my work.</span>
-    <a href="#home">Back to top </a>
+    <a href="#cv">Download CV</a>
   </div>
 </footer>
 
