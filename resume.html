@@ -3,186 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Full CV of Nikhil A S - MSc Data Science and Bio-AI, advanced Python, AI/ML, Generative AI, LLM applications, chatbots, voice AI, data engineering and bioinformatics.">
-<title>Nikhil A S | Full CV</title>
+<meta name="description" content="Complete CV of Nikhil A S - MSc Data Science, AI/ML engineering, GenAI, LLM applications, chatbots, voice AI, computer vision and applied data science.">
+<title>Nikhil A S | Master CV</title>
 <style>
-:root{--navy:#17365d;--teal:#087e79;--ink:#1d2939;--muted:#526174;--line:#d9e4ef;--panel:#f6f9fc;--blue:#2057a5}
-*{box-sizing:border-box}
-body{margin:0;background:#edf2f7;color:var(--ink);font:14px/1.55 Arial,Helvetica,sans-serif}
-a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
-.shell{max-width:980px;margin:28px auto;background:#fff;padding:34px 48px 42px;box-shadow:0 8px 35px rgba(22,42,77,.10)}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-.brand{font-weight:700;color:var(--navy);text-decoration:none;letter-spacing:-.02em}
-.actions{display:flex;gap:9px;flex-wrap:wrap}
-.button{display:inline-block;padding:10px 14px;background:var(--navy);border:1px solid var(--navy);border-radius:8px;color:#fff;text-decoration:none;font-size:12px;font-weight:700}
-.button.secondary{background:#fff;color:var(--navy)}
-h1{margin:0;color:var(--navy);font-size:30px;line-height:1.05}
-.tagline{margin:5px 0;color:var(--teal);font-weight:700;font-size:12px;letter-spacing:.035em}
-.contact{margin:5px 0;color:var(--muted);font-size:12px}
-.links{margin:7px 0 18px;font-size:12px}
-.portfolio{padding:8px 0;border-top:2px solid #b8e1da;border-bottom:1px solid var(--line);margin:10px 0 8px;font-size:12px}
-.portfolio strong{color:var(--teal);margin-right:10px;letter-spacing:.04em}
-section{margin-top:17px}
-h2{margin:0 0 7px;padding-bottom:4px;border-bottom:1px solid var(--navy);color:var(--navy);font-size:14px;letter-spacing:.04em;text-transform:uppercase}
-p{margin:4px 0 7px}
-.skill{margin:4px 0;font-size:12px}
-.skill strong{color:var(--navy)}
-.role{font-weight:700;color:var(--navy);margin:7px 0 2px}
-.tech{font-size:11px;color:var(--muted);font-style:italic;margin:0 0 3px}
-ul{margin:3px 0 8px;padding-left:20px}
-li{margin:3px 0}
-.project{margin:10px 0 13px}
-.small{font-size:12px;color:var(--muted)}
-.download-strip{margin:22px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.download-strip p{margin:2px 0;color:var(--muted);font-size:12px}
-@media(max-width:700px){.shell{margin:0;padding:23px 19px;box-shadow:none}.topbar{align-items:flex-start}h1{font-size:26px}}
+:root{--navy:#17365d;--blue:#2457a6;--teal:#087e79;--ink:#1d2939;--muted:#526174;--line:#d2deec;--paper:#fff}
+*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:var(--ink);font:9.2pt/1.38 Arial,Helvetica,sans-serif}
+.toolbar{max-width:900px;margin:18px auto 10px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.toolbar a,.toolbar button{border:1px solid var(--navy);border-radius:8px;padding:9px 14px;background:var(--navy);color:white;text-decoration:none;font-weight:700;font-size:12px;cursor:pointer}.toolbar .light{background:white;color:var(--navy)}
+.sheet{width:210mm;min-height:297mm;margin:0 auto 18px;background:var(--paper);padding:13mm 15mm 14mm;box-shadow:0 8px 35px rgba(22,42,77,.12);position:relative}
+h1{margin:0;text-align:center;color:var(--navy);font-size:23pt;line-height:1.05;letter-spacing:.03em}
+.tagline{text-align:center;color:var(--teal);font-weight:bold;font-size:8.2pt;letter-spacing:.045em;margin:5px 0 4px}
+.contact{text-align:center;color:var(--muted);font-size:8.1pt;margin:3px 0}
+.links{text-align:center;font-size:7.8pt;margin:4px 0 10px;color:var(--blue)}
+a{color:var(--blue);text-decoration:none}
+.header-rule{height:2px;background:var(--teal);margin:8px 0 9px}
+h2{font-size:10pt;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--line);padding-bottom:3px;margin:9px 0 5px}
+p{margin:3px 0 5px}
+.skills p{margin:3px 0}
+strong{color:var(--navy)}
+.role{font-weight:bold;color:var(--navy);margin:6px 0 1px}
+.stack{font-style:italic;font-size:8pt;color:var(--muted);margin:0 0 2px}
+ul{margin:2px 0 7px;padding-left:17px}li{margin:2px 0}
+.project{margin:6px 0 9px;break-inside:avoid}
+.small{font-size:8pt;color:var(--muted)}
+.page-num{position:absolute;bottom:7mm;right:15mm;color:var(--muted);font-size:7.5pt}
+.page2{padding-top:13mm}
+@media(max-width:760px){.sheet{width:100%;min-height:0;margin:0;padding:22px 18px;box-shadow:none}.toolbar{padding:0 12px;flex-wrap:wrap}}
 @media print{
- @page{size:A4;margin:12mm}
- body{background:#fff;font-size:10pt}
- .shell{max-width:none;margin:0;padding:0;box-shadow:none}
- .topbar,.download-strip{display:none}
- h1{font-size:24pt}
- section{margin-top:11px}
- h2{font-size:11pt}
- .skill,p,li{font-size:9pt}
- a{color:inherit;text-decoration:none}
+ @page{size:A4;margin:0}
+ body{background:#fff;font-size:8.3pt}
+ .toolbar{display:none}
+ .sheet{width:210mm;height:297mm;min-height:297mm;margin:0;box-shadow:none;padding:12mm 14mm 13mm;overflow:hidden;page-break-after:always;break-after:page}
+ .sheet:last-of-type{page-break-after:auto;break-after:auto}
+ a{color:inherit}
+ .page-num{bottom:6mm;right:14mm}
 }
 </style>
 </head>
 <body>
-<main class="shell">
-  <div class="topbar">
-    <a class="brand" href="./">Nikhil A S</a>
-    <div class="actions">
-      <a class="button" href="downloads/Nikhil_AS_Master_CV_2026.pdf" download>Download Full Master CV (PDF)</a>
-      <a class="button secondary" href="downloads/Nikhil_AS_Quick_Apply_CV_2026.pdf" download>Download One-Page CV</a>
-    </div>
-  </div>
-  <header>
-    <h1>NIKHIL A S</h1>
-    <p class="tagline">ADVANCED PYTHON | AI/ML ENGINEERING | GENAI &amp; LLM APPLICATIONS | BIO-AI</p>
-    <p class="contact">Thiruvananthapuram, Kerala | +91 7306084480 | <a href="mailto:nikhilas7680@gmail.com">nikhilas7680@gmail.com</a></p>
-    <div class="portfolio"><strong>PORTFOLIO</strong><a href="https://nikhilasds25-bit.github.io">nikhilasds25-bit.github.io</a></div>
-    <div class="links"><strong>GitHub:</strong> <a href="https://github.com/nikhilasds25-bit">github.com/nikhilasds25-bit</a> &nbsp; | &nbsp; <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nikhil-a-s-a11679263">linkedin.com/in/nikhil-a-s-a11679263</a></div>
-  </header>
-
-  <section>
-    <h2>Professional Summary</h2>
-    <p>MSc Data Science and Bio-AI student and former Data Science Intern with advanced Python programming and hands-on experience building LLM-powered applications across conversational AI, voice interaction, GraphRAG, computer vision, NLP classification, cyber-risk analysis, disease-surveillance analytics and bioinformatics. Develops end-to-end workflows spanning curated data, model integration, APIs, backend services, evaluation, CI/CD automation and evidence-led reporting.</p>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <p class="skill"><strong>Advanced Python &amp; Software Engineering:</strong> Python OOP, modular programming, data structures, exception handling, logging, debugging, scripting, testing, SQL, Git/GitHub.</p>
-    <p class="skill"><strong>Machine Learning &amp; Analytics:</strong> Pandas, NumPy, scikit-learn, XGBoost, LightGBM, Random Forest, Logistic Regression, SVM, CNNs, PyTorch, TensorFlow/Keras, EDA, feature engineering, class imbalance, threshold tuning, SHAP, LIME.</p>
-    <p class="skill"><strong>NLP, Chatbots &amp; LLM Applications:</strong> NLP preprocessing, tokenization, intent classification, entity extraction, dialogue/state management, conversation memory, context handling, fallback logic, transformers, BERT/DistilBERT, LLM APIs, prompt engineering, tool calling, embeddings, semantic search, RAG, GraphRAG, FAISS, Chroma, LangChain, LangGraph, MCP.</p>
-    <p class="skill"><strong>Voice AI &amp; Conversational Systems:</strong> ASR/STT, Faster-Whisper, TTS, VAD, audio preprocessing, turn-taking, streaming, WebSockets, latency awareness, Word Error Rate (WER), conversational evaluation.</p>
-    <p class="skill"><strong>Backend, Data Engineering &amp; DevOps:</strong> FastAPI, REST/JSON APIs, Pydantic, SQLite, SQLAlchemy, API/unit/integration testing, pytest, GitHub CI/CD automation, Streamlit, React/Vite, PySpark, Spark SQL, Parquet, ETL, NetworkX, BigQuery, Power BI, Docker.</p>
-    <p class="skill"><strong>Bioinformatics &amp; Computational Biology:</strong> Drug-target prediction, NGS analysis, KEGG pathway analysis, STRING protein-interaction networks, DAVID functional enrichment, UCSF Chimera, molecular docking workflows, network pharmacology.</p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <p class="role">Travansoft Solutions | Data Science Intern <span class="small">| May 2026 - July 2026</span></p>
-    <ul>
-      <li>Supported Python-based data collection, cleaning, preprocessing, exploratory analysis and machine-learning workflows using data-science libraries.</li>
-      <li>Used SQL for analysis and Power BI to prepare dashboards and reporting outputs; maintained technical documentation and collaborated with team members on project deliverables.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Selected Projects</h2>
-    <div class="project">
-      <p class="role">6th Sense - MemoryLoop AI | Team Lead</p>
-      <p class="tech">Python, FastAPI, SQLite/SQLAlchemy, NLP, Faster-Whisper, TTS, conversational memory</p>
-      <ul>
-        <li>Led development of a caregiver voice-interaction workflow and patient Q&amp;A chatbot for guided memory rehearsal. Integrated speech processing, conversational memory and task-context storage.</li>
-        <li>Built backend ML/NLP pipelines to evaluate patient answers against prepared event details and select adaptive follow-up questions; connected application workflows through FastAPI and SQLite/SQLAlchemy.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <p class="role">SupplyBeacon - Explainable Supply-Chain Risk Intelligence</p>
-      <p class="tech">Python, FastAPI, NetworkX, GraphRAG, LangGraph, React/TypeScript, APIs</p>
-      <ul>
-        <li>Built an in-app GraphRAG chatbot that retrieves linked supplier, product, warehouse and location evidence to explain potential supply delays. Integrated retrieval and response workflows with the React application through FastAPI and LangGraph.</li>
-        <li>Built a graph-backed Scenario Lab and evidence-linked analysis; the saved base graph contains 3,144 nodes and 9,350 edges. Documented source-freshness, retrieval and risk-score calibration limitations.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <p class="role">WATCHER-X - Multimodal PCB Defect Inspection</p>
-      <p class="tech">Python, YOLO11n, Qwen2.5-VL-3B-Instruct, DeepPCB, OpenCV, image comparison</p>
-      <ul>
-        <li>Prepared 1,000 training and 500 evaluation images across six PCB defect classes and trained YOLO11n. Reported evaluation-split results of 97.21% mAP@50 and 71.52% mAP@50-95; performed confidence-threshold and error analysis.</li>
-        <li>Integrated Qwen2.5-VL into an interactive PCB-analysis chatbot so users can submit board images, ask questions and receive defect explanations grounded in detector outputs and reference-board comparisons.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <p class="role">Employment Fraud Detector - NLP Classification</p>
-      <p class="tech">Python, NLP preprocessing, TF-IDF, Logistic Regression, XGBoost, DistilBERT, Streamlit, GitHub CI/CD</p>
-      <ul>
-        <li>Built NLP preprocessing and text-classification workflows for 17,880 job postings (4.84% fraudulent), comparing TF-IDF/Logistic Regression, structured-feature XGBoost and DistilBERT. DistilBERT reported 91% fraud precision, 86% recall and 88% F1.</li>
-        <li>Added GitHub-based CI/CD automation. The live Streamlit application uses the Logistic Regression baseline; the DistilBERT results are from the advanced model evaluation.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <p class="role">PRIORIS - Cyber Risk Data Engineering &amp; Analysis</p>
-      <p class="tech">Python, PySpark, NVD/CVE, CISA KEV, CPE/version matching, Parquet, chatbot</p>
-      <ul>
-        <li>Built a Spark ingestion/enrichment pipeline for 400 NVD CVEs and 1,748 CISA KEV records, then evaluated software applicability against a synthetic inventory of 1,000 assets and 2,814 software installations.</li>
-        <li>Added a chatbot for natural-language cyber-risk analysis, allowing users to query vulnerability evidence and software-asset applicability. Validation: 32 unit tests passed and all 27 supported golden cases passed; unsupported and review-pending cases remain documented.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <p class="role">CareGrid Sentinel - Kerala Disease Surveillance Analytics</p>
-      <p class="tech">Python, Pandas, ML pipelines, public-health analytics, chatbot</p>
-      <ul>
-        <li>Developed ML pipelines for dengue and leptospirosis prediction and a chatbot interface for exploring reported case rates, district/time trends, spread pace and possible drivers.</li>
-        <li>Structured a 280-row, 18-column district dataset across 14 Kerala districts and statewide monthly records; implemented data-quality checks for coverage, missing/duplicate/invalid values and case-death consistency, documenting source discrepancies.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <p class="role">College Information Chatbot - DACE Academic Project</p>
-      <p class="tech">Python, NLP, RAG, information retrieval, manual knowledge-base curation</p>
-      <ul><li>Manually collected and curated college information, organised it into a searchable knowledge base and developed an NLP + RAG chatbot to retrieve relevant content and answer student information queries.</li></ul>
-    </div>
-    <div class="project">
-      <p class="role">Graph Propagation &amp; Temporal Learning - Research Project</p>
-      <p class="tech">Python, NetworkX, PyTorch, directed networks, competitive diffusion, temporal analysis</p>
-      <ul><li>Analysed 85,495 tweets and 109,443 directed edge rows, forming a 17,598-user diffusion population. Implemented a stochastic S/I1/I2/R competitive-diffusion simulator and workflows for temporal interaction analysis and leakage-aware evaluation.</li></ul>
-    </div>
-    <div class="project">
-      <p class="role">Loan Default Risk Classification - Academic Team Project</p>
-      <p class="tech">Python, Pandas, scikit-learn, LightGBM, SHAP</p>
-      <ul><li>Contributed data collection, preprocessing and exploratory analysis for 307,511 loan applications and 122 raw features. The team compared Logistic Regression, Random Forest and LightGBM; reported LightGBM ROC-AUC was 0.768, with recall/precision trade-offs examined through threshold tuning.</li></ul>
-    </div>
-    <div class="project">
-      <p class="role">Android Malware Detection - Team Project</p>
-      <p class="tech">Python, scikit-learn, Random Forest, SVM, KNN, GridSearchCV</p>
-      <ul><li>Worked with 29,332 Android-app samples and contributed a Random Forest baseline, model evaluation, confusion-matrix analysis and feature-importance review. The team reported a tuned Random Forest ROC-AUC of 0.9934.</li></ul>
-    </div>
-    <div class="project">
-      <p class="role">Breast Cancer Tumor Classification - Team Project</p>
-      <p class="tech">Python, scikit-learn, Logistic Regression, SVM, Random Forest, Streamlit</p>
-      <ul><li>Contributed to data-quality checks, EDA and model comparison using 568 records and 30 numerical features; built a Streamlit research prototype. This is an educational model comparison, not a clinically validated diagnostic tool.</li></ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Additional Applied Work</h2>
-    <p>NYC Taxi analytics using PySpark/Spark SQL; hospital-discharge process-mining project (Team Lead); Tamil handwritten-character recognition; CNN-based algal-bloom analysis; healthcare ML explainability and governance review (SHAP, LIME, fairness, leakage and privacy).</p>
-  </section>
-
-  <section>
-    <h2>Education &amp; Professional Development</h2>
-    <p><strong>Digital University Kerala (Kerala University of Digital Sciences; formerly IIITM-K)</strong> | MSc Data Science and Bio-AI | 2025-2027 (Expected)</p>
-    <p><strong>Google DeepMind AI Research Foundations Capstone - Completed:</strong> Gemma 3, LoRA fine-tuning, dataset preparation and responsible evaluation.</p>
-    <p>Google Cloud Data Analytics Certificate / Program - Completed; Databases and SQL for Data Science with Python (Coursera); Designing Scalable RAG Pipelines Masterclass (Scaler); Kafka &amp; ZooKeeper Masterclass (Scaler); PMI Kickoff; Advanced Scrum; AI for Product Managers.</p>
-  </section>
-
-  <div class="download-strip">
-    <div><strong>Need an application-ready copy?</strong><p>Download the concise one-page CV for internship and entry-level applications.</p></div>
-    <a class="button" href="downloads/Nikhil_AS_Quick_Apply_CV_2026.pdf" download>Download One-Page CV</a>
-  </div>
+<div class="toolbar"><a class="light" href="./#cv">Back to portfolio</a><button onclick="window.print()">Print / Save as PDF</button></div>
+<main>
+<section class="sheet">
+<header>
+<h1>NIKHIL A S</h1>
+<p class="tagline">ADVANCED PYTHON | AI/ML ENGINEERING | GENAI &amp; LLM APPLICATIONS | APPLIED DATA SCIENCE</p>
+<p class="contact">Thiruvananthapuram, Kerala | +91 7306084480 | <a href="mailto:nikhilas7680@gmail.com">nikhilas7680@gmail.com</a></p>
+<p class="links"><a href="https://nikhilasds25-bit.github.io">Portfolio: nikhilasds25-bit.github.io</a> | <a href="https://github.com/nikhilasds25-bit">GitHub</a> | <a href="https://linkedin.com/in/nikhil-a-s-a11679263">LinkedIn</a></p>
+<div class="header-rule"></div>
+</header>
+<h2>Professional Summary</h2>
+<p>MSc Data Science student and former Data Science Intern with advanced Python and hands-on experience building AI/ML and GenAI applications across conversational AI, voice workflows, GraphRAG, computer vision, NLP, cyber-risk analytics, disease surveillance, graph learning and Bio-AI. Builds end-to-end workflows spanning curated data, model integration, backend APIs, evaluation, automation and evidence-led reporting, with clear documentation of prototype boundaries and known limitations.</p>
+<h2>Technical Skills</h2>
+<div class="skills">
+<p><strong>Advanced Python &amp; Software Engineering:</strong> Python OOP, modular design, data structures, exception handling, logging, debugging, scripting, API integration, testing, Git/GitHub.</p>
+<p><strong>Data Science &amp; Machine Learning:</strong> SQL, Pandas, NumPy, EDA, data cleaning, feature engineering, validation, scikit-learn, XGBoost, LightGBM, Random Forest, Logistic Regression, SVM, class imbalance, threshold tuning, ROC-AUC, precision/recall/F1, SHAP, LIME.</p>
+<p><strong>Deep Learning, NLP &amp; Computer Vision:</strong> PyTorch, TensorFlow/Keras, Hugging Face Transformers, BERT/DistilBERT, YOLO11n, OpenCV, Qwen2.5-VL, CNNs, text classification, image analysis.</p>
+<p><strong>GenAI, Chatbots &amp; Voice AI:</strong> LLM application/API integration, prompt engineering, tool calling, embeddings, semantic search, RAG, GraphRAG, FAISS, Chroma, LangChain, LangGraph, MCP, dialogue/state management, conversation memory, fallback logic, ASR/STT, Faster-Whisper, TTS, VAD, audio preprocessing and streaming concepts.</p>
+<p><strong>Backend, Data Engineering &amp; DevOps:</strong> FastAPI, REST/JSON APIs, Pydantic, SQLite, SQLAlchemy, pytest, API/unit/integration testing, GitHub CI/CD automation, Streamlit, React/Vite, PySpark, Spark SQL, Parquet, ETL, NetworkX, BigQuery, Power BI, Docker.</p>
+<p><strong>Bioinformatics &amp; Computational Biology:</strong> Drug-target prediction, NGS analysis, KEGG pathway analysis, STRING protein-interaction networks, DAVID functional enrichment, UCSF Chimera, molecular docking workflows, network pharmacology.</p>
+</div>
+<h2>Professional Experience</h2>
+<p class="role">Travansoft Solutions | Data Science Intern <span class="small">| May 2026 - July 2026</span></p>
+<ul><li>Supported Python-based data collection, cleaning, preprocessing, exploratory analysis and machine-learning workflows using data-science libraries.</li><li>Used SQL for analysis and Power BI to prepare dashboards and reporting outputs; maintained technical documentation and collaborated on analytical deliverables.</li></ul>
+<h2>Selected Projects</h2>
+<div class="project">
+<p class="role">6th Sense - MemoryLoop AI | Team Lead</p>
+<p class="stack">Python, FastAPI, SQLite, SQLAlchemy, NLP, Faster-Whisper, speech processing, conversational memory</p>
+<ul><li>Led development of a caregiver voice-interaction workflow and patient Q&amp;A chatbot for guided memory rehearsal, integrating speech processing, conversation/task-context storage and adaptive follow-up flow.</li><li>Built backend ML/NLP pipelines to evaluate patient answers against prepared event details and select follow-up questions using FastAPI with SQLite/SQLAlchemy. Local ASR uses Faster-Whisper; the public demo uses browser TTS.</li></ul>
+</div>
+<div class="project">
+<p class="role">SupplyBeacon - Explainable Supply-Chain Risk Intelligence</p>
+<p class="stack">Python, FastAPI, NetworkX, GraphRAG, LangGraph, React/TypeScript, REST APIs</p>
+<ul><li>Built an in-app GraphRAG chatbot that retrieves supplier, product, warehouse and location evidence to explain potential supply delays; connected the conversational workflow to React through FastAPI/LangGraph.</li><li>Created graph-backed risk views and a Scenario Lab. Saved base graph: 3,144 nodes and 9,350 edges; documented evidence freshness, entity-scoped retrieval, risk-score calibration and response/ranking limitations.</li></ul>
+</div>
+<div class="project">
+<p class="role">WATCHER-X - Multimodal PCB Defect Inspection</p>
+<p class="stack">Python, YOLO11n, Qwen2.5-VL-3B-Instruct, DeepPCB, OpenCV, image comparison</p>
+<ul><li>Prepared 1,000 training and 500 evaluation images across six PCB defect classes and trained YOLO11n; reported 97.21% mAP@50 and 71.52% mAP@50-95 on the evaluation split.</li><li>Integrated Qwen2.5-VL into an interactive PCB-analysis chatbot for image uploads, user questions and defect explanations grounded in detector outputs/reference-board comparisons. VLM explanations are assistive; a five-crop blind trial did not achieve exact fine-grained label agreement.</li></ul>
+</div>
+<div class="page-num">NIKHIL A S | 1</div>
+</section>
+<section class="sheet page2">
+<h2>Selected Projects - Continued</h2>
+<div class="project">
+<p class="role">Employment Fraud Detector - NLP Classification</p>
+<p class="stack">Python, TF-IDF, Logistic Regression, XGBoost, DistilBERT, Streamlit, GitHub CI/CD</p>
+<ul><li>Built text-preprocessing and classification workflows for 17,880 job postings (4.84% fraudulent), comparing TF-IDF/Logistic Regression, structured-feature XGBoost and DistilBERT.</li><li>DistilBERT evaluation reported 91% fraud precision, 86% recall and 88% F1. The live Streamlit demo uses the lighter Logistic Regression baseline; added GitHub-based CI/CD automation.</li></ul>
+</div>
+<div class="project">
+<p class="role">PRIORIS - Cyber Risk Data Engineering &amp; Conversational Analysis</p>
+<p class="stack">Python, PySpark, NVD/CVE, CISA KEV, CPE/version matching, Parquet, pytest, chatbot</p>
+<ul><li>Built a local Spark ingestion/enrichment pipeline for 400 NVD CVEs and 1,748 CISA KEV records; generated a reproducible synthetic inventory of 1,000 assets and 2,814 software installations.</li><li>Implemented CPE/component and version-range applicability checks with audit evidence, plus a chatbot for natural-language cyber-risk analysis using vulnerability and asset-applicability evidence. Validation: 32 unit tests passed and all 27 supported golden cases passed; unsupported/review-pending cases remain documented.</li></ul>
+</div>
+<div class="project">
+<p class="role">CareGrid Sentinel - Kerala Disease Surveillance Analytics</p>
+<p class="stack">Python, Pandas, machine-learning pipelines, public-health analytics, chatbot</p>
+<ul><li>Developed ML pipelines for dengue and leptospirosis trend prediction and a chatbot interface for exploring reported case rates, district/time trends, spread pace and potential drivers.</li><li>Organised 280 district records across 14 Kerala districts (18 columns) alongside statewide monthly records; implemented coverage, missing/duplicate/invalid-value and case-death consistency checks. Forecasts are exploratory and depend on available historical data, not a real-time clinical surveillance feed.</li></ul>
+</div>
+<div class="project">
+<p class="role">College Information Chatbot - DACE Academic Project</p>
+<p class="stack">Python, NLP, RAG, information retrieval, manually curated knowledge base</p>
+<ul><li>Manually collected and curated college information into a searchable knowledge base; developed an NLP + RAG chatbot to retrieve relevant information and answer student queries.</li></ul>
+</div>
+<div class="project">
+<p class="role">Graph Propagation &amp; Temporal Learning - Research Project</p>
+<p class="stack">Python, NetworkX, PyTorch, directed graphs, competitive diffusion, temporal analysis</p>
+<ul><li>Analysed 85,495 tweets and 109,443 directed edge rows, forming a connected diffusion population of 17,598 users for network-structure and information-propagation analysis.</li><li>Implemented a stochastic S/I1/I2/R competitive-diffusion simulator and workflows for temporal reconstruction, competition sensitivity and leakage-conscious weekly model comparisons.</li></ul>
+</div>
+<h2>Academic &amp; Additional Projects</h2>
+<div class="project">
+<p class="role">Loan Default Risk Classification - Academic Team Project</p>
+<p class="stack">Python, Pandas, scikit-learn, LightGBM, SMOTE, SHAP</p>
+<ul><li>Contributed data collection, preprocessing and exploratory analysis across 307,511 loan applications; the team compared Logistic Regression, Random Forest and LightGBM. Reported LightGBM ROC-AUC was 0.768; threshold experiments examined the recall/false-alarm trade-off.</li></ul>
+</div>
+<div class="project">
+<p class="role">Android Malware Detection - Team Project</p>
+<p class="stack">Python, scikit-learn, Random Forest, SVM, KNN, GridSearchCV</p>
+<ul><li>Worked with 29,332 Android-app samples; implemented a Random Forest baseline, evaluated confusion matrices and reviewed feature importance. The team reported tuned Random Forest ROC-AUC of 0.9934.</li></ul>
+</div>
+<div class="project">
+<p class="role">Breast Cancer Tumor Classification - Team Project</p>
+<p class="stack">Python, scikit-learn, Logistic Regression, SVM, Random Forest, Streamlit</p>
+<ul><li>Contributed data-quality checks, EDA and model comparison using 568 records and 30 numerical features; built a Streamlit research prototype. This is an educational model comparison, not a clinically validated diagnostic tool.</li></ul>
+</div>
+<h2>Additional Applied Work</h2>
+<p>Healthcare ML explainability/governance review (SHAP, LIME, fairness, leakage and privacy); NYC Taxi analytics using PySpark/Spark SQL; hospital-discharge process-mining project (Team Lead); Tamil handwritten-character recognition; CNN-based algal-bloom analysis; biomedical classification and computational biology workflows.</p>
+<h2>Education &amp; Professional Development</h2>
+<p><strong>Kerala University of Digital Sciences, Innovation and Technology (Digital University Kerala), formerly IIITM-K</strong> | MSc Data Science and Bio-AI | 2025-2027 (Expected)</p>
+<p><strong>Google DeepMind AI Research Foundations Capstone - Completed:</strong> Gemma 3, LoRA fine-tuning, dataset preparation and responsible model evaluation.</p>
+<p><strong>Google Cloud Data Analytics Certificate - Completed.</strong> Further learning: Databases and SQL for Data Science with Python (Coursera); RAG Pipelines Masterclass (Scaler); Kafka &amp; ZooKeeper Masterclass (Scaler); PMI Kickoff Badge; Advanced Scrum; AI for Product Managers; Infosys Springboard.</p>
+<div class="page-num">NIKHIL A S | 2</div>
+</section>
 </main>
 </body>
 </html>
